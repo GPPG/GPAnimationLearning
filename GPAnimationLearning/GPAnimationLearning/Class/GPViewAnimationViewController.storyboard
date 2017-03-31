@@ -70,6 +70,9 @@
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.40784313729999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="登陆"/>
+                                <connections>
+                                    <action selector="loginBtnClick:" destination="055-gu-Aqo" eventType="touchUpInside" id="0Ew-BD-AWE"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqx-Im-eHx">
                                 <rect key="frame" x="19" y="171" width="337.5" height="40"/>
@@ -136,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18I-UZ-Akj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-401" y="126"/>
+            <point key="canvasLocation" x="-2498" y="241"/>
         </scene>
     </scenes>
     <resources>

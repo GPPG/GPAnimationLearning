@@ -257,7 +257,7 @@
 			children = (
 				E097C67A1E8E005300EB7E15 /* Base */,
 				E097C6781E8DFE9C00EB7E15 /* Lib */,
-				E097C6791E8E001700EB7E15 /* 01-View动画 */,
+				E097C6791E8E001700EB7E15 /* 01-View&Spring */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -417,14 +417,14 @@
 			name = Lib;
 			sourceTree = "<group>";
 		};
-		E097C6791E8E001700EB7E15 /* 01-View动画 */ = {
+		E097C6791E8E001700EB7E15 /* 01-View&Spring */ = {
 			isa = PBXGroup;
 			children = (
 				E097C67E1E8E007C00EB7E15 /* GPViewAnimationViewController.h */,
 				E097C67F1E8E007C00EB7E15 /* GPViewAnimationViewController.m */,
 				E097C6811E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard */,
 			);
-			name = "01-View动画";
+			name = "01-View&Spring";
 			sourceTree = "<group>";
 		};
 		E097C67A1E8E005300EB7E15 /* Base */ = {

@@ -19,11 +19,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *passcodeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 // 控件约束
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tittleCenterYLayout;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *phoneCenterYLayout;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *passcodeCenterYLayout;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginBtnCenterYLayout;
+
+// 动作
+- (IBAction)loginBtnClick:(id)sender;
 
 @end
 
@@ -49,6 +51,7 @@
     self.loginBtn.layer.cornerRadius = 10;
     self.loginBtn.layer.masksToBounds = YES;
 }
+#pragma mark - 动画相关
 - (void)setupAnimation
 {
     self.tittleCenterYLayout.constant -= SCREEN_WIDTH;
@@ -97,5 +100,11 @@
     [UIView animateWithDuration:0.5 delay:1.1 options:UIViewAnimationOptionLayoutSubviews animations:^{
         self.clound4.alpha = 1.0;
     } completion:nil];
+}
+#pragma mark - 内部方法
+- (IBAction)loginBtnClick:(id)sender {
+
+
+
 }
 @end

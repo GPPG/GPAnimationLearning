@@ -9,11 +9,11 @@
 #import "ViewController.h"
 #import "GPViewAnimationViewController.h"
 
-
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *rootTableView;
 @property (nonatomic, strong) NSArray *titleArray;
 @property (nonatomic, strong) NSArray *subVcArray;
+@property (nonatomic, strong) NSArray *subVcIDArray;
 @end
 
 @implementation ViewController
@@ -47,6 +47,7 @@ static NSString * const oneCellID = @"oneCellID";
     [self.rootTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:oneCellID];
 }
 #pragma mark - 表格数据源
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.titleArray.count;
@@ -61,7 +62,7 @@ static NSString * const oneCellID = @"oneCellID";
 #pragma mark - 表格代理
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *tempVc =  SBVC(self.subVcArray[indexPath.row]);
+    UIViewController *tempVc = SBVC(self.subVcArray[indexPath.row]);
     tempVc.navTitle = self.titleArray[indexPath.row];
     [self.navigationController pushViewController:tempVc animated:YES];
 }
@@ -81,6 +82,11 @@ static NSString * const oneCellID = @"oneCellID";
     }
     return _subVcArray;
 }
-
-
+- (NSArray *)subVcIDArray
+{
+    if (!_subVcIDArray) {
+        _subVcIDArray = @[[GPViewAnimationViewController class]];
+    }
+    return _subVcIDArray;
+}
 @end
