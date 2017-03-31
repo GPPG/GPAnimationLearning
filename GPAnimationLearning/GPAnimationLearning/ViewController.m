@@ -25,7 +25,7 @@ static NSString * const oneCellID = @"oneCellID";
 }
 #pragma mark - 初始化方法
 - (void)setNav
-{
+{    
     self.navigationItem.title = @"iOS_Animations_by_Tutorials";
 }
 - (void)addView
