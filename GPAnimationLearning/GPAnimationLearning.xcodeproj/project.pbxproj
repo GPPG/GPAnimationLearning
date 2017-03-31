@@ -48,6 +48,9 @@
 		E097C6751E8DFE8E00EB7E15 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E097C6521E8DFE8E00EB7E15 /* SVProgressHUD.bundle */; };
 		E097C6761E8DFE8E00EB7E15 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C6541E8DFE8E00EB7E15 /* SVProgressHUD.m */; };
 		E097C6771E8DFE8E00EB7E15 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C6561E8DFE8E00EB7E15 /* SVRadialGradientLayer.m */; };
+		E097C67D1E8E005300EB7E15 /* GPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C67C1E8E005300EB7E15 /* GPBaseViewController.m */; };
+		E097C6801E8E007C00EB7E15 /* GPViewAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C67F1E8E007C00EB7E15 /* GPViewAnimationViewController.m */; };
+		E097C6821E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E097C6811E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +156,11 @@
 		E097C6541E8DFE8E00EB7E15 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		E097C6551E8DFE8E00EB7E15 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		E097C6561E8DFE8E00EB7E15 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		E097C67B1E8E005300EB7E15 /* GPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBaseViewController.h; sourceTree = "<group>"; };
+		E097C67C1E8E005300EB7E15 /* GPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBaseViewController.m; sourceTree = "<group>"; };
+		E097C67E1E8E007C00EB7E15 /* GPViewAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPViewAnimationViewController.h; sourceTree = "<group>"; };
+		E097C67F1E8E007C00EB7E15 /* GPViewAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPViewAnimationViewController.m; sourceTree = "<group>"; };
+		E097C6811E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPViewAnimationViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +255,9 @@
 		E097C6081E8DFE8E00EB7E15 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				E097C67A1E8E005300EB7E15 /* Base */,
 				E097C6781E8DFE9C00EB7E15 /* Lib */,
+				E097C6791E8E001700EB7E15 /* 01-View动画 */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -407,6 +417,25 @@
 			name = Lib;
 			sourceTree = "<group>";
 		};
+		E097C6791E8E001700EB7E15 /* 01-View动画 */ = {
+			isa = PBXGroup;
+			children = (
+				E097C67E1E8E007C00EB7E15 /* GPViewAnimationViewController.h */,
+				E097C67F1E8E007C00EB7E15 /* GPViewAnimationViewController.m */,
+				E097C6811E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard */,
+			);
+			name = "01-View动画";
+			sourceTree = "<group>";
+		};
+		E097C67A1E8E005300EB7E15 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E097C67B1E8E005300EB7E15 /* GPBaseViewController.h */,
+				E097C67C1E8E005300EB7E15 /* GPBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -469,6 +498,7 @@
 		E0238ADA1E8CE29E00B22A29 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GP;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "郭鹏";
 				TargetAttributes = {
@@ -513,6 +543,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E097C6821E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard in Resources */,
 				E097C6751E8DFE8E00EB7E15 /* SVProgressHUD.bundle in Resources */,
 				E0238AF51E8CE29E00B22A29 /* LaunchScreen.storyboard in Resources */,
 				E0238AF21E8CE29E00B22A29 /* Assets.xcassets in Resources */,
@@ -557,12 +588,14 @@
 				E097C6711E8DFE8E00EB7E15 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				E097C65B1E8DFE8E00EB7E15 /* IQUIView+Hierarchy.m in Sources */,
 				E097C6621E8DFE8E00EB7E15 /* IQPreviousNextView.m in Sources */,
+				E097C6801E8E007C00EB7E15 /* GPViewAnimationViewController.m in Sources */,
 				E097C6741E8DFE8E00EB7E15 /* SVProgressAnimatedView.m in Sources */,
 				E097C6721E8DFE8E00EB7E15 /* UIView+SDAutoLayout.m in Sources */,
 				E097C6671E8DFE8E00EB7E15 /* MJExtensionConst.m in Sources */,
 				E097C6611E8DFE8E00EB7E15 /* IQBarButtonItem.m in Sources */,
 				E097C66D1E8DFE8E00EB7E15 /* NSObject+MJCoding.m in Sources */,
 				E097C6761E8DFE8E00EB7E15 /* SVProgressHUD.m in Sources */,
+				E097C67D1E8E005300EB7E15 /* GPBaseViewController.m in Sources */,
 				E097C65A1E8DFE8E00EB7E15 /* IQUITextFieldView+Additions.m in Sources */,
 				E0238AE71E8CE29E00B22A29 /* main.m in Sources */,
 				E097C6641E8DFE8E00EB7E15 /* IQToolbar.m in Sources */,

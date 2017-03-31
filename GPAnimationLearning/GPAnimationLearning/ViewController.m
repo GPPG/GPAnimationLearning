@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "GPViewAnimationViewController.h"
+
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *rootTableView;
@@ -67,7 +69,7 @@ static NSString * const oneCellID = @"oneCellID";
 - (NSArray *)titleArray
 {
     if (!_titleArray) {
-        _titleArray = @[];
+        _titleArray = @[@"01-View动画"];
     }
     return _titleArray;
 }
@@ -75,7 +77,7 @@ static NSString * const oneCellID = @"oneCellID";
 - (NSArray *)subVcArray
 {
     if (!_subVcArray) {
-        _subVcArray = @[];
+        _subVcArray = @[[GPViewAnimationViewController class]];
     }
     return _subVcArray;
 }
