@@ -186,8 +186,6 @@
 		E0238AD91E8CE29E00B22A29 = {
 			isa = PBXGroup;
 			children = (
-				E097C5981E8DF1F000EB7E15 /* Lib */,
-				E097C5961E8DF02B00EB7E15 /* Base */,
 				E0238AE41E8CE29E00B22A29 /* GPAnimationLearning */,
 				E0238AFE1E8CE29E00B22A29 /* GPAnimationLearningTests */,
 				E0238B091E8CE29E00B22A29 /* GPAnimationLearningUITests */,
@@ -208,6 +206,8 @@
 		E0238AE41E8CE29E00B22A29 /* GPAnimationLearning */ = {
 			isa = PBXGroup;
 			children = (
+				E097C5981E8DF1F000EB7E15 /* Lib */,
+				E097C5961E8DF02B00EB7E15 /* Base */,
 				E0238AE81E8CE29E00B22A29 /* AppDelegate.h */,
 				E0238AE91E8CE29E00B22A29 /* AppDelegate.m */,
 				E0238AEB1E8CE29E00B22A29 /* ViewController.h */,
@@ -255,6 +255,7 @@
 				E097C5941E8DF02700EB7E15 /* GPBaseViewController.m */,
 			);
 			name = Base;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E097C5981E8DF1F000EB7E15 /* Lib */ = {
@@ -267,6 +268,7 @@
 				E097C5991E8DF1FD00EB7E15 /* SDAutoLayout */,
 			);
 			name = Lib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E097C5991E8DF1FD00EB7E15 /* SDAutoLayout */ = {
