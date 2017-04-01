@@ -69,7 +69,7 @@
                                     <constraint firstAttribute="width" secondItem="QZp-26-xRG" secondAttribute="height" multiplier="1:0.15" id="cYQ-Xy-Z1y"/>
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.40784313729999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="登陆"/>
+                                <state key="normal" title="登录"/>
                                 <connections>
                                     <action selector="loginBtnClick:" destination="055-gu-Aqo" eventType="touchUpInside" id="0Ew-BD-AWE"/>
                                 </connections>
@@ -99,6 +99,7 @@
                             <constraint firstItem="QZp-26-xRG" firstAttribute="centerX" secondItem="Gvs-wh-zNZ" secondAttribute="centerX" id="4I9-nh-FCp"/>
                             <constraint firstItem="fuJ-YH-EXK" firstAttribute="centerX" secondItem="Gvs-wh-zNZ" secondAttribute="centerX" id="4Ow-dI-dUi"/>
                             <constraint firstItem="cQp-Qv-LNw" firstAttribute="trailing" secondItem="Wbj-Ko-518" secondAttribute="trailing" id="7zo-hz-JXn"/>
+                            <constraint firstItem="hGc-Ee-Lgl" firstAttribute="top" secondItem="2sj-Q1-VPm" secondAttribute="bottom" constant="91" id="8mX-LD-02T"/>
                             <constraint firstItem="Wbj-Ko-518" firstAttribute="leading" secondItem="Gvs-wh-zNZ" secondAttribute="leadingMargin" constant="-31" id="BUK-UP-wci"/>
                             <constraint firstItem="mqx-Im-eHx" firstAttribute="width" secondItem="Gvs-wh-zNZ" secondAttribute="width" multiplier="0.9" id="CBO-34-NUv"/>
                             <constraint firstItem="hGc-Ee-Lgl" firstAttribute="centerX" secondItem="Gvs-wh-zNZ" secondAttribute="centerX" id="HJ9-Ao-GsI"/>
@@ -116,7 +117,6 @@
                             <constraint firstItem="mqx-Im-eHx" firstAttribute="top" secondItem="hGc-Ee-Lgl" secondAttribute="bottom" constant="30" id="ekT-hy-JbW"/>
                             <constraint firstItem="QZp-26-xRG" firstAttribute="width" secondItem="Gvs-wh-zNZ" secondAttribute="width" multiplier="0.8" id="f1S-Dk-ezd"/>
                             <constraint firstAttribute="trailing" secondItem="94K-2P-aHL" secondAttribute="trailing" id="fBc-8B-AuV"/>
-                            <constraint firstItem="QZp-26-xRG" firstAttribute="top" secondItem="fuJ-YH-EXK" secondAttribute="bottom" constant="30" id="gjd-U5-usF"/>
                             <constraint firstItem="94K-2P-aHL" firstAttribute="leading" secondItem="Gvs-wh-zNZ" secondAttribute="leading" id="kpJ-RH-r7I"/>
                             <constraint firstItem="AGg-5y-PHi" firstAttribute="top" secondItem="2sj-Q1-VPm" secondAttribute="bottom" constant="72" id="v57-rE-im4"/>
                             <constraint firstItem="AGg-5y-PHi" firstAttribute="trailing" secondItem="YfW-HN-UFX" secondAttribute="trailing" id="xv7-c7-dZj"/>
@@ -129,6 +129,7 @@
                         <outlet property="clound4" destination="YfW-HN-UFX" id="3DV-0L-cW2"/>
                         <outlet property="loginBtn" destination="QZp-26-xRG" id="iII-qV-tuO"/>
                         <outlet property="loginBtnCenterYLayout" destination="4I9-nh-FCp" id="mGU-XM-iYc"/>
+                        <outlet property="loginBtnCenterYYLayout" destination="Vu7-MK-sP0" id="OjT-Wc-q26"/>
                         <outlet property="passcodeCenterYLayout" destination="4Ow-dI-dUi" id="12H-HU-buZ"/>
                         <outlet property="passcodeTextField" destination="fuJ-YH-EXK" id="Xaz-fb-oXw"/>
                         <outlet property="phoneCenterYLayout" destination="Z6x-kv-Fnx" id="258-T4-d5T"/>

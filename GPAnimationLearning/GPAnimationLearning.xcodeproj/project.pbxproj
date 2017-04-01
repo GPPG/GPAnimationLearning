@@ -257,7 +257,7 @@
 			children = (
 				E097C67A1E8E005300EB7E15 /* Base */,
 				E097C6781E8DFE9C00EB7E15 /* Lib */,
-				E097C6791E8E001700EB7E15 /* 01-View&Spring */,
+				E097C6791E8E001700EB7E15 /* 01-View&Spring&Transitions */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -417,14 +417,14 @@
 			name = Lib;
 			sourceTree = "<group>";
 		};
-		E097C6791E8E001700EB7E15 /* 01-View&Spring */ = {
+		E097C6791E8E001700EB7E15 /* 01-View&Spring&Transitions */ = {
 			isa = PBXGroup;
 			children = (
 				E097C67E1E8E007C00EB7E15 /* GPViewAnimationViewController.h */,
 				E097C67F1E8E007C00EB7E15 /* GPViewAnimationViewController.m */,
 				E097C6811E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard */,
 			);
-			name = "01-View&Spring";
+			name = "01-View&Spring&Transitions";
 			sourceTree = "<group>";
 		};
 		E097C67A1E8E005300EB7E15 /* Base */ = {
@@ -759,6 +759,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = GPAnimationLearning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ww.GPAnimationLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -771,6 +772,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = GPAnimationLearning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ww.GPAnimationLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
