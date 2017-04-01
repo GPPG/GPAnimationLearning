@@ -70,7 +70,7 @@ static NSString * const oneCellID = @"oneCellID";
 - (NSArray *)titleArray
 {
     if (!_titleArray) {
-        _titleArray = @[@"01-View动画"];
+        _titleArray = @[@"01-View&Spring&Transitions"];
     }
     return _titleArray;
 }

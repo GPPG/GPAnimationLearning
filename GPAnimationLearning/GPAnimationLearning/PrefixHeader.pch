@@ -13,12 +13,13 @@
 #import "SDAutoLayout.h"
 #import "UIViewController+GPExtension.h"
 #import "MJExtension.h"
+#import "UIView+LayoutMethods.h"
 
 #define GPBGColor [UIColor colorWithRed:0.93 green:0.94 blue:0.95 alpha:1.00]
 #define GPREDColor [UIColor colorWithRed:0.91 green:0.23 blue:0.20 alpha:1.00]
 #define SBVC(vcName) [UIStoryboard storyboardWithName:NSStringFromClass(vcName) bundle:nil].instantiateInitialViewController
 
-#define SBVCID(vcName,idName)   [[UIStoryboard storyboardWithName:NSStringFromClass(vcName) bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass(idName)];
+#define SBVCID(vcName,idName)   [[UIStoryboard storyboardWithName:NSStringFromClass(vcName) bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass(idName)]
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)

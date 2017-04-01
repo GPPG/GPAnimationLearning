@@ -15,6 +15,7 @@
 		E0238AF51E8CE29E00B22A29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0238AF31E8CE29E00B22A29 /* LaunchScreen.storyboard */; };
 		E0238B001E8CE29E00B22A29 /* GPAnimationLearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238AFF1E8CE29E00B22A29 /* GPAnimationLearningTests.m */; };
 		E0238B0B1E8CE29E00B22A29 /* GPAnimationLearningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238B0A1E8CE29E00B22A29 /* GPAnimationLearningUITests.m */; };
+		E08398A11E8F954C00624D8A /* UIView+LayoutMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E08398A01E8F954C00624D8A /* UIView+LayoutMethods.m */; };
 		E097C6571E8DFE8E00EB7E15 /* UIViewController+GPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C60B1E8DFE8E00EB7E15 /* UIViewController+GPExtension.m */; };
 		E097C6581E8DFE8E00EB7E15 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C60F1E8DFE8E00EB7E15 /* IQNSArray+Sort.m */; };
 		E097C6591E8DFE8E00EB7E15 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C6111E8DFE8E00EB7E15 /* IQUIScrollView+Additions.m */; };
@@ -87,6 +88,8 @@
 		E0238B061E8CE29E00B22A29 /* GPAnimationLearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPAnimationLearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0238B0A1E8CE29E00B22A29 /* GPAnimationLearningUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPAnimationLearningUITests.m; sourceTree = "<group>"; };
 		E0238B0C1E8CE29E00B22A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E083989F1E8F954C00624D8A /* UIView+LayoutMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutMethods.h"; sourceTree = "<group>"; };
+		E08398A01E8F954C00624D8A /* UIView+LayoutMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutMethods.m"; sourceTree = "<group>"; };
 		E097C5971E8DF19C00EB7E15 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E097C60A1E8DFE8E00EB7E15 /* UIViewController+GPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GPExtension.h"; sourceTree = "<group>"; };
 		E097C60B1E8DFE8E00EB7E15 /* UIViewController+GPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GPExtension.m"; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 		E097C6091E8DFE8E00EB7E15 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E083989F1E8F954C00624D8A /* UIView+LayoutMethods.h */,
+				E08398A01E8F954C00624D8A /* UIView+LayoutMethods.m */,
 				E097C60A1E8DFE8E00EB7E15 /* UIViewController+GPExtension.h */,
 				E097C60B1E8DFE8E00EB7E15 /* UIViewController+GPExtension.m */,
 			);
@@ -597,6 +602,7 @@
 				E097C6761E8DFE8E00EB7E15 /* SVProgressHUD.m in Sources */,
 				E097C67D1E8E005300EB7E15 /* GPBaseViewController.m in Sources */,
 				E097C65A1E8DFE8E00EB7E15 /* IQUITextFieldView+Additions.m in Sources */,
+				E08398A11E8F954C00624D8A /* UIView+LayoutMethods.m in Sources */,
 				E0238AE71E8CE29E00B22A29 /* main.m in Sources */,
 				E097C6641E8DFE8E00EB7E15 /* IQToolbar.m in Sources */,
 				E097C66F1E8DFE8E00EB7E15 /* NSObject+MJProperty.m in Sources */,

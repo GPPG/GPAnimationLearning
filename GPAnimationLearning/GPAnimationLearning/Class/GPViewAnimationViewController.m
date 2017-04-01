@@ -73,9 +73,9 @@
     [self.view addSubview:({
         UIImageView *statusImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"banner"]];
         statusImageView.hidden = YES;
-        statusImageView.center = self.loginBtn.center;
-        self.statusImageView = statusImageView;
+        statusImageView.center = self.view.center;
         self.initialPoint = statusImageView.center;
+        self.statusImageView = statusImageView;
         statusImageView;
     })];
     
@@ -83,15 +83,13 @@
     [self.statusImageView addSubview:({
         UILabel *statusLabel = [[UILabel alloc]init];
         statusLabel.textColor = [UIColor colorWithDisplayP3Red:0.89 green:0.38 blue:0.0 alpha:1.0];
+        statusLabel.width = 100;
+        statusLabel.height = 30;
+        statusLabel.center = CGPointMake(self.statusImageView.width * 0.5, self.statusImageView.height * 0.5);
         statusLabel.font = [UIFont systemFontOfSize:18];
         self.statusLabel = statusLabel;
         statusLabel;
     })];
-    
-    
-    
-    
-    
 }
 #pragma mark - 动画相关
 - (void)setupAnimation
@@ -105,6 +103,8 @@
     self.clound2.alpha = 0.0;
     self.clound3.alpha = 0.0;
     self.clound4.alpha = 0.0;
+    
+    
 }
 - (void)loadAnimation
 {
@@ -146,20 +146,79 @@
         self.loginBtnCenterYYLayout.constant -= 30;
         [self.view layoutIfNeeded];
     } completion:nil];
+    
+    [self animateCloud:self.clound1];
+    [self animateCloud:self.clound2];
+    [self animateCloud:self.clound3];
+    [self animateCloud:self.clound4];
+
 }
 
 - (void)showMessage:(NSInteger)messageInt
 {
- 
-    
+    self.statusLabel.text = self.titleArray[messageInt];
+    [UIView transitionWithView:self.statusImageView duration:0.33 options:UIViewAnimationOptionCurveEaseOut & UIViewAnimationOptionTransitionFlipFromBottom animations:^{
+        self.statusImageView.hidden = NO;
+    } completion:^(BOOL finished) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (messageInt < self.titleArray.count - 1) {
+                [self removeMessage:messageInt];
+            }else{
+                [self resetForm];
+            }
+        });
+    }];
 }
 
+- (void)removeMessage:(NSInteger)messageInt
+{
+ 
+    [UIView animateWithDuration:0.33 delay:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+        self.statusImageView.centerX += SCREEN_WIDTH;
+    } completion:^(BOOL finished) {
+        self.statusImageView.hidden = YES;
+        self.statusImageView.center = self.initialPoint;
+        [self showMessage:messageInt + 1];
+    }];
+}
+- (void)resetForm
+{
+ 
+    [UIView transitionWithView:self.statusImageView duration:0.2 options:UIViewAnimationOptionTransitionFlipFromTop animations:^{
+        self.statusImageView.hidden = YES;
+        self.statusImageView.center = self.initialPoint;
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+        self.spinner.center = CGPointMake(-50, 6);
+        self.spinner.alpha = 0.0;
+        self.loginBtn.backgroundColor = [UIColor colorWithRed:0.63 green:0.84 blue:0.35 alpha:1.0];
+        self.loginBtn.width -= 80;
+        self.loginBtnCenterYYLayout.constant -= 60.0;
+        [self.view layoutIfNeeded];
+    } completion:nil];
+}
+
+- (void)animateCloud:(UIImageView *)cloundImageView
+{
+    CGFloat cloudSpeed = 60.0 / SCREEN_WIDTH;
+    CGFloat duration = (SCREEN_WIDTH - cloundImageView.frame.origin.x) * cloudSpeed;
+    [UIView animateWithDuration: duration delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+        cloundImageView.x = SCREEN_WIDTH;
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        cloundImageView.x = -cloundImageView.width;
+        [self animateCloud:cloundImageView];
+        [self.view layoutIfNeeded];
+    }];
+}
 #pragma mark - 内部方法
 - (IBAction)loginBtnClick:(id)sender {
     
     [UIView animateWithDuration:1.5 delay:0.0 usingSpringWithDamping:0.2 initialSpringVelocity:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
         self.loginBtn.width += 80;
         self.loginBtn.enabled = NO;
+        [self showMessage:0];
     } completion:nil];
     
     [UIView animateWithDuration:0.33 delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
