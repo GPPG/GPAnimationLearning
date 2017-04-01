@@ -19,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *passcodeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (nonatomic, strong) UIActivityIndicatorView *spinner;
+@property (nonatomic, strong) UIImageView *statusImageView;
+@property (nonatomic, strong) UILabel *statusLabel;
+@property (nonatomic, assign) CGPoint initialPoint;
 // 控件约束
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tittleCenterYLayout;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *phoneCenterYLayout;
@@ -29,6 +32,8 @@
 // 动作
 - (IBAction)loginBtnClick:(id)sender;
 
+// 名称数组
+@property (nonatomic, strong) NSArray *titleArray;
 
 @end
 
@@ -54,14 +59,39 @@
     self.loginBtn.layer.cornerRadius = 10;
     self.loginBtn.layer.masksToBounds = YES;
     
+    // 添加网络指示器
     [self.loginBtn addSubview:({
         UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         spinner.frame = CGRectMake(-50.0, 6.0, 20.0, 20.0);
-//        spinner.alpha = 0.0;
+        spinner.alpha = 0.0;
         [spinner startAnimating];
         self.spinner = spinner;
         spinner;
     })];
+    
+    // 添加登录提示背景
+    [self.view addSubview:({
+        UIImageView *statusImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"banner"]];
+        statusImageView.hidden = YES;
+        statusImageView.center = self.loginBtn.center;
+        self.statusImageView = statusImageView;
+        self.initialPoint = statusImageView.center;
+        statusImageView;
+    })];
+    
+    // 添加背景提示文字
+    [self.statusImageView addSubview:({
+        UILabel *statusLabel = [[UILabel alloc]init];
+        statusLabel.textColor = [UIColor colorWithDisplayP3Red:0.89 green:0.38 blue:0.0 alpha:1.0];
+        statusLabel.font = [UIFont systemFontOfSize:18];
+        self.statusLabel = statusLabel;
+        statusLabel;
+    })];
+    
+    
+    
+    
+    
 }
 #pragma mark - 动画相关
 - (void)setupAnimation
@@ -118,6 +148,12 @@
     } completion:nil];
 }
 
+- (void)showMessage:(NSInteger)messageInt
+{
+ 
+    
+}
+
 #pragma mark - 内部方法
 - (IBAction)loginBtnClick:(id)sender {
     
@@ -133,5 +169,13 @@
         self.spinner.center = CGPointMake(40.0, self.loginBtn.height * 0.5);
         [self.view layoutIfNeeded];
     } completion:nil];
+}
+#pragma mark - 懒加载
+- (NSArray *)titleArray
+{
+    if (!_titleArray) {
+        _titleArray = @[@"连接中...",@"开始验证...",@"验证中...",@"登录失败"];
+    }
+    return _titleArray;
 }
 @end
