@@ -65,6 +65,13 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
         // 航班号和登机口
         [self cubeTransition:self.FlightNO text:flightData.flightNrStr direction:direction];
         [self cubeTransition:self.boardingNOLabel text:flightData.gateNrStr direction:direction];
+        
+        // 出发点和目标点
+        CGPoint offsetDeparting = CGPointMake(direction * 80, 0.0);
+        [self moveLabel:self.originLabel text:flightData.departingFromStr offset:offsetDeparting];
+        
+        CGPoint offsetArriving = CGPointMake(0.0,direction * 50);
+        [self moveLabel:self.arrivalPointLabel text:flightData.arrivingToStr offset:offsetArriving];
     }
     else{ // 第一次,不用动画直接赋值
         self.FlightNO.text = flightData.flightNrStr;
@@ -127,8 +134,40 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
     }];
 }
 // 出发点和到达点
+- (void)moveLabel:(UILabel *)label text:(NSString *)text offset:(CGPoint)offset
+{
+    CGAffineTransform tempTransform = CGAffineTransformMakeTranslation(offset.x, offset.y);
+ 
+    UILabel *auxLabel = [[UILabel alloc]initWithFrame:label.frame];
+    [self.view addSubview:({
+        auxLabel.backgroundColor = [UIColor clearColor];
+        auxLabel.text = text;
+        [auxLabel sizeToFit];
+        auxLabel.font = label.font;
+        auxLabel.textAlignment = label.textAlignment;
+        auxLabel.textColor = label.textColor;
+        auxLabel.transform = tempTransform;
+        auxLabel.alpha = 0;
+        auxLabel;
+    })];
 
-
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        label.transform = tempTransform;
+        label.alpha = 0.0;
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.25 delay:0.1 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        auxLabel.transform = CGAffineTransformIdentity;
+        auxLabel.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        [auxLabel removeFromSuperview];
+        label.text = text;
+        [label sizeToFit];
+        label.alpha = 1.0;
+        label.transform = CGAffineTransformIdentity;
+    }];
+    
+}
 #pragma mark - 懒加载
 - (GPFlighData *)beiJingFlightData
 {
