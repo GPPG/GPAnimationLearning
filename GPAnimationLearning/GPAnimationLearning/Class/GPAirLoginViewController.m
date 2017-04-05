@@ -30,6 +30,11 @@
 @property (nonatomic, strong) GPFlighData *sahngHaiFlightData;
 @end
 
+typedef NS_ENUM(NSInteger,AnimationDirection){
+    positive = 1,
+    negative = -1
+};
+
 @implementation GPAirLoginViewController
 
 #pragma mark - 生命周期
@@ -46,24 +51,84 @@
         self.snowView = snowView;
         snowView;
     })];
-    [self changFlightData:self.beiJingFlightData];
+    [self changFlightData:self.beiJingFlightData animated:NO];
 }
 #pragma mark - 内部方法
-- (void)changFlightData:(GPFlighData *)flightData
+- (void)changFlightData:(GPFlighData *)flightData animated:(BOOL)isAnimated
 {
     self.topLabel.text = flightData.summaryStr;
-    self.FlightNO.text = flightData.flightNrStr;
-    self.boardingNOLabel.text = flightData.gateNrStr;
-    self.originLabel.text = flightData.departingFromStr;
-    self.arrivalPointLabel.text = flightData.arrivingToStr;
-    self.statusLabel.text = flightData.flightStatusStr;
-    self.bgImageView.image = [UIImage imageNamed:flightData.weatherImageNameStr];
-    self.snowView.hidden = !flightData.isShowWeatherEffects;
-    
+
+    AnimationDirection direction = flightData.isTakingOff ? positive : negative;
+    if (isAnimated) {
+        // 背景图片更换
+        [self fadeImageView:[UIImage imageNamed:flightData.weatherImageNameStr] showEffects:flightData.isShowWeatherEffects];
+        // 航班号和登机口
+        [self cubeTransition:self.FlightNO text:flightData.flightNrStr direction:direction];
+        [self cubeTransition:self.boardingNOLabel text:flightData.gateNrStr direction:direction];
+    }
+    else{ // 第一次,不用动画直接赋值
+        self.FlightNO.text = flightData.flightNrStr;
+        self.boardingNOLabel.text = flightData.gateNrStr;
+        self.originLabel.text = flightData.departingFromStr;
+        self.arrivalPointLabel.text = flightData.arrivingToStr;
+        self.statusLabel.text = flightData.flightStatusStr;
+        self.bgImageView.image = [UIImage imageNamed:flightData.weatherImageNameStr];
+        self.snowView.hidden = !flightData.isShowWeatherEffects;
+    }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-       [self changFlightData:flightData.isTakingOff ? self.sahngHaiFlightData : self.beiJingFlightData];
+        [self changFlightData:flightData.isTakingOff ? self.sahngHaiFlightData : self.beiJingFlightData animated:YES];
     });
 }
+
+#pragma mark - 动画相关
+// 图片
+- (void)fadeImageView:(UIImage *)toImage showEffects:(BOOL)showEffects
+{
+    // 背景图片
+    [UIView transitionWithView:self.bgImageView duration:1.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        self.bgImageView.image = toImage;
+    } completion:nil];
+    
+    // 雪花发射器
+    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.snowView.alpha = showEffects ? 1.0 : 0.0;
+    } completion:nil];
+}
+// 航班号&登机口
+- (void)cubeTransition:(UILabel *)label text:(NSString *)text direction:(AnimationDirection)direction
+{
+    CGFloat auxLabelOffset = direction * label.height * 0.5;
+    CGAffineTransform transScaleForm = CGAffineTransformMakeScale(1.0, 0.1);
+    CGAffineTransform tempTop = CGAffineTransformMakeTranslation(0.0, auxLabelOffset);
+    CGAffineTransform tempDow = CGAffineTransformMakeTranslation(0.0, -auxLabelOffset);
+    CGAffineTransform transTopForm = CGAffineTransformConcat(transScaleForm, tempTop);
+    CGAffineTransform transDowForm = CGAffineTransformConcat(transScaleForm, tempDow);
+    
+    UILabel *auxLabel = [[UILabel alloc]initWithFrame:label.frame];
+    [label.superview addSubview:({
+        auxLabel.backgroundColor = [UIColor clearColor];
+        auxLabel.text = text;
+        [auxLabel sizeToFit];
+        auxLabel.font = label.font;
+        auxLabel.textAlignment = label.textAlignment;
+        auxLabel.textColor = label.textColor;
+        auxLabel.transform = transTopForm;
+        auxLabel;
+    })];
+    
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        auxLabel.transform = CGAffineTransformIdentity;
+        label.transform = transDowForm;
+    } completion:^(BOOL finished) {
+        label.text = auxLabel.text;
+        [label sizeToFit];
+        label.transform = CGAffineTransformIdentity;
+        [auxLabel removeFromSuperview];
+    }];
+}
+// 出发点和到达点
+
+
 #pragma mark - 懒加载
 - (GPFlighData *)beiJingFlightData
 {
