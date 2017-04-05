@@ -196,6 +196,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E020E22B1E948F9E00CFBDA0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		E0238AD91E8CE29E00B22A29 = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +272,7 @@
 			children = (
 				E08398A41E8FA78500624D8A /* GPAirLoginViewController.h */,
 				E08398A51E8FA78500624D8A /* GPAirLoginViewController.m */,
+				E020E22B1E948F9E00CFBDA0 /* New Group */,
 				E0B951F31E928028007B30D2 /* GPAirLoginViewController.storyboard */,
 			);
 			name = "02-viewPractice&keyFrame";

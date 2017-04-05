@@ -144,10 +144,23 @@
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="FlightNO" destination="JXn-p5-mOs" id="Ahx-f6-gJV"/>
+                        <outlet property="airImageView" destination="un2-Yj-Yos" id="FrD-7w-45N"/>
+                        <outlet property="arrivalPointLabel" destination="MHt-y6-peC" id="wL9-kW-CqA"/>
+                        <outlet property="boardingLabel" destination="Wya-8T-V11" id="ovm-m9-ILJ"/>
+                        <outlet property="boardingNOLabel" destination="67O-Fg-Ww4" id="sjH-6v-lTi"/>
+                        <outlet property="flightLabel" destination="HYb-vv-f6e" id="AmN-u5-5np"/>
+                        <outlet property="originLabel" destination="Uqt-2s-2P3" id="uz3-fR-Rkw"/>
+                        <outlet property="statusImageView" destination="QIf-f4-G2l" id="At9-j1-ecS"/>
+                        <outlet property="statusLabel" destination="vjr-aJ-ht0" id="8vi-zU-vuE"/>
+                        <outlet property="topImageView" destination="kfC-zM-cGB" id="T76-2v-Pg7"/>
+                        <outlet property="topLabel" destination="ZbK-SI-Pe9" id="zbN-wW-LhK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bld-9w-kVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231.19999999999999" y="35.532233883058474"/>
+            <point key="canvasLocation" x="-209" y="-216"/>
         </scene>
     </scenes>
     <resources>
