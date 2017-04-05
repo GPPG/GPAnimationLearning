@@ -25,9 +25,7 @@
     emitter.emitterSize = self.bounds.size;
     emitter.emitterShape = kCAEmitterLayerRectangle;
 
-    
     CAEmitterCell *emitterCell = [[CAEmitterCell alloc]init];
-    
     emitterCell.contents = (__bridge id _Nullable)([UIImage imageNamed:@"flake.png"].CGImage);
     emitterCell.birthRate = 200;
     emitterCell.lifetime = 3.5;

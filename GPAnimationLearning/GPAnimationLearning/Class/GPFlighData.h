@@ -15,9 +15,10 @@
 @property (nonatomic, copy) NSString *departingFromStr;
 @property (nonatomic, copy) NSString *arrivingToStr;
 @property (nonatomic, copy) NSString *weatherImageNameStr;
+
 @property (nonatomic, assign,getter = isShowWeatherEffects) BOOL showWeatherEffects;
 @property (nonatomic, assign,getter = isTakingOff) BOOL TakingOff;
-@property (nonatomic, assign,getter = isFlightStatus) BOOL flightStatus;
+@property (nonatomic, copy) NSString *flightStatusStr;
 
 - (instancetype)initWithIsBeiJing:(BOOL)IsBeiJing;
 @end

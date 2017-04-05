@@ -148,6 +148,7 @@
                         <outlet property="FlightNO" destination="JXn-p5-mOs" id="Ahx-f6-gJV"/>
                         <outlet property="airImageView" destination="un2-Yj-Yos" id="FrD-7w-45N"/>
                         <outlet property="arrivalPointLabel" destination="MHt-y6-peC" id="wL9-kW-CqA"/>
+                        <outlet property="bgImageView" destination="HrV-eU-ugl" id="fjS-3a-uPs"/>
                         <outlet property="boardingLabel" destination="Wya-8T-V11" id="ovm-m9-ILJ"/>
                         <outlet property="boardingNOLabel" destination="67O-Fg-Ww4" id="sjH-6v-lTi"/>
                         <outlet property="flightLabel" destination="HYb-vv-f6e" id="AmN-u5-5np"/>
@@ -156,6 +157,7 @@
                         <outlet property="statusLabel" destination="vjr-aJ-ht0" id="8vi-zU-vuE"/>
                         <outlet property="topImageView" destination="kfC-zM-cGB" id="T76-2v-Pg7"/>
                         <outlet property="topLabel" destination="ZbK-SI-Pe9" id="zbN-wW-LhK"/>
+                        <outlet property="topView" destination="1U0-Er-qYQ" id="KqY-PH-P8N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bld-9w-kVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
