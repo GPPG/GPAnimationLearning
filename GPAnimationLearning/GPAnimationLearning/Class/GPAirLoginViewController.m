@@ -7,6 +7,7 @@
 //
 
 #import "GPAirLoginViewController.h"
+#import "GPFlighData.h"
 
 @interface GPAirLoginViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *topImageView;

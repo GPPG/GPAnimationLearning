@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E020E22E1E948FD400CFBDA0 /* GPFlighData.m in Sources */ = {isa = PBXBuildFile; fileRef = E020E22D1E948FD400CFBDA0 /* GPFlighData.m */; };
+		E020E2311E9498D700CFBDA0 /* GPSnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = E020E2301E9498D700CFBDA0 /* GPSnowView.m */; };
 		E0238AE71E8CE29E00B22A29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238AE61E8CE29E00B22A29 /* main.m */; };
 		E0238AEA1E8CE29E00B22A29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238AE91E8CE29E00B22A29 /* AppDelegate.m */; };
 		E0238AED1E8CE29E00B22A29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238AEC1E8CE29E00B22A29 /* ViewController.m */; };
@@ -77,6 +78,8 @@
 /* Begin PBXFileReference section */
 		E020E22C1E948FD400CFBDA0 /* GPFlighData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPFlighData.h; sourceTree = "<group>"; };
 		E020E22D1E948FD400CFBDA0 /* GPFlighData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPFlighData.m; sourceTree = "<group>"; };
+		E020E22F1E9498D700CFBDA0 /* GPSnowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSnowView.h; sourceTree = "<group>"; };
+		E020E2301E9498D700CFBDA0 /* GPSnowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSnowView.m; sourceTree = "<group>"; };
 		E0238AE21E8CE29E00B22A29 /* GPAnimationLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPAnimationLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0238AE61E8CE29E00B22A29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0238AE81E8CE29E00B22A29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -266,6 +269,8 @@
 		E08398A31E8FA6B600624D8A /* 02-viewPractice&keyFrame */ = {
 			isa = PBXGroup;
 			children = (
+				E020E22F1E9498D700CFBDA0 /* GPSnowView.h */,
+				E020E2301E9498D700CFBDA0 /* GPSnowView.m */,
 				E020E22C1E948FD400CFBDA0 /* GPFlighData.h */,
 				E020E22D1E948FD400CFBDA0 /* GPFlighData.m */,
 				E08398A41E8FA78500624D8A /* GPAirLoginViewController.h */,
@@ -632,6 +637,7 @@
 				E097C66F1E8DFE8E00EB7E15 /* NSObject+MJProperty.m in Sources */,
 				E097C6691E8DFE8E00EB7E15 /* MJProperty.m in Sources */,
 				E097C65D1E8DFE8E00EB7E15 /* IQUIWindow+Hierarchy.m in Sources */,
+				E020E2311E9498D700CFBDA0 /* GPSnowView.m in Sources */,
 				E097C6631E8DFE8E00EB7E15 /* IQTitleBarButtonItem.m in Sources */,
 				E097C65C1E8DFE8E00EB7E15 /* IQUIViewController+Additions.m in Sources */,
 				E097C6771E8DFE8E00EB7E15 /* SVRadialGradientLayer.m in Sources */,
