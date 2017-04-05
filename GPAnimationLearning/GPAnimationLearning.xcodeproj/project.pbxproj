@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E020E22E1E948FD400CFBDA0 /* GPFlighData.m in Sources */ = {isa = PBXBuildFile; fileRef = E020E22D1E948FD400CFBDA0 /* GPFlighData.m */; };
 		E0238AE71E8CE29E00B22A29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238AE61E8CE29E00B22A29 /* main.m */; };
 		E0238AEA1E8CE29E00B22A29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238AE91E8CE29E00B22A29 /* AppDelegate.m */; };
 		E0238AED1E8CE29E00B22A29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238AEC1E8CE29E00B22A29 /* ViewController.m */; };
@@ -74,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E020E22C1E948FD400CFBDA0 /* GPFlighData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPFlighData.h; sourceTree = "<group>"; };
+		E020E22D1E948FD400CFBDA0 /* GPFlighData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPFlighData.m; sourceTree = "<group>"; };
 		E0238AE21E8CE29E00B22A29 /* GPAnimationLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPAnimationLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0238AE61E8CE29E00B22A29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0238AE81E8CE29E00B22A29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -196,13 +199,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E020E22B1E948F9E00CFBDA0 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		E0238AD91E8CE29E00B22A29 = {
 			isa = PBXGroup;
 			children = (
@@ -270,9 +266,10 @@
 		E08398A31E8FA6B600624D8A /* 02-viewPractice&keyFrame */ = {
 			isa = PBXGroup;
 			children = (
+				E020E22C1E948FD400CFBDA0 /* GPFlighData.h */,
+				E020E22D1E948FD400CFBDA0 /* GPFlighData.m */,
 				E08398A41E8FA78500624D8A /* GPAirLoginViewController.h */,
 				E08398A51E8FA78500624D8A /* GPAirLoginViewController.m */,
-				E020E22B1E948F9E00CFBDA0 /* New Group */,
 				E0B951F31E928028007B30D2 /* GPAirLoginViewController.storyboard */,
 			);
 			name = "02-viewPractice&keyFrame";
@@ -609,6 +606,7 @@
 				E0238AED1E8CE29E00B22A29 /* ViewController.m in Sources */,
 				E097C65F1E8DFE8E00EB7E15 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				E097C6681E8DFE8E00EB7E15 /* MJFoundation.m in Sources */,
+				E020E22E1E948FD400CFBDA0 /* GPFlighData.m in Sources */,
 				E097C6591E8DFE8E00EB7E15 /* IQUIScrollView+Additions.m in Sources */,
 				E097C6571E8DFE8E00EB7E15 /* UIViewController+GPExtension.m in Sources */,
 				E0238AEA1E8CE29E00B22A29 /* AppDelegate.m in Sources */,
