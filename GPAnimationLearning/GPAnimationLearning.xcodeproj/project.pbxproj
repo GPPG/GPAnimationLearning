@@ -56,6 +56,8 @@
 		E097C6801E8E007C00EB7E15 /* GPViewAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C67F1E8E007C00EB7E15 /* GPViewAnimationViewController.m */; };
 		E097C6821E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E097C6811E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard */; };
 		E0B951F41E928028007B30D2 /* GPAirLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B951F31E928028007B30D2 /* GPAirLoginViewController.storyboard */; };
+		E0BA904F1E9633DA00BF7A46 /* GPPackingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BA904E1E9633DA00BF7A46 /* GPPackingListViewController.m */; };
+		E0BA90511E9633EF00BF7A46 /* GPPackingListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BA90501E9633EF00BF7A46 /* GPPackingListViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +177,9 @@
 		E097C67F1E8E007C00EB7E15 /* GPViewAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPViewAnimationViewController.m; sourceTree = "<group>"; };
 		E097C6811E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPViewAnimationViewController.storyboard; sourceTree = "<group>"; };
 		E0B951F31E928028007B30D2 /* GPAirLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPAirLoginViewController.storyboard; sourceTree = "<group>"; };
+		E0BA904D1E9633DA00BF7A46 /* GPPackingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPackingListViewController.h; sourceTree = "<group>"; };
+		E0BA904E1E9633DA00BF7A46 /* GPPackingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPackingListViewController.m; sourceTree = "<group>"; };
+		E0BA90501E9633EF00BF7A46 /* GPPackingListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPPackingListViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +292,7 @@
 				E097C6781E8DFE9C00EB7E15 /* Lib */,
 				E097C6791E8E001700EB7E15 /* 01-View&Spring&Transitions */,
 				E08398A31E8FA6B600624D8A /* 02-viewPractice&keyFrame */,
+				E0BA904C1E9633A400BF7A46 /* 03-auto-layout */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -467,6 +473,16 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		E0BA904C1E9633A400BF7A46 /* 03-auto-layout */ = {
+			isa = PBXGroup;
+			children = (
+				E0BA904D1E9633DA00BF7A46 /* GPPackingListViewController.h */,
+				E0BA904E1E9633DA00BF7A46 /* GPPackingListViewController.m */,
+				E0BA90501E9633EF00BF7A46 /* GPPackingListViewController.storyboard */,
+			);
+			name = "03-auto-layout";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -578,6 +594,7 @@
 				E097C6821E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard in Resources */,
 				E097C6751E8DFE8E00EB7E15 /* SVProgressHUD.bundle in Resources */,
 				E0238AF51E8CE29E00B22A29 /* LaunchScreen.storyboard in Resources */,
+				E0BA90511E9633EF00BF7A46 /* GPPackingListViewController.storyboard in Resources */,
 				E0238AF21E8CE29E00B22A29 /* Assets.xcassets in Resources */,
 				E097C6661E8DFE8E00EB7E15 /* IQKeyboardManager.bundle in Resources */,
 				E0238AF01E8CE29E00B22A29 /* Main.storyboard in Resources */,
@@ -633,6 +650,7 @@
 				E08398A61E8FA78500624D8A /* GPAirLoginViewController.m in Sources */,
 				E08398A11E8F954C00624D8A /* UIView+LayoutMethods.m in Sources */,
 				E0238AE71E8CE29E00B22A29 /* main.m in Sources */,
+				E0BA904F1E9633DA00BF7A46 /* GPPackingListViewController.m in Sources */,
 				E097C6641E8DFE8E00EB7E15 /* IQToolbar.m in Sources */,
 				E097C66F1E8DFE8E00EB7E15 /* NSObject+MJProperty.m in Sources */,
 				E097C6691E8DFE8E00EB7E15 /* MJProperty.m in Sources */,
