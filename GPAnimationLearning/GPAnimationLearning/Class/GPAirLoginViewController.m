@@ -72,6 +72,8 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
         
         CGPoint offsetArriving = CGPointMake(0.0,direction * 50);
         [self moveLabel:self.arrivalPointLabel text:flightData.arrivingToStr offset:offsetArriving];
+        // 状态文字
+        [self cubeTransition:self.statusLabel text:flightData.flightStatusStr direction:direction];
     }
     else{ // 第一次,不用动画直接赋值
         self.FlightNO.text = flightData.flightNrStr;
@@ -101,7 +103,7 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
         self.snowView.alpha = showEffects ? 1.0 : 0.0;
     } completion:nil];
 }
-// 航班号&登机口
+// 航班号&登机口&状态文字
 - (void)cubeTransition:(UILabel *)label text:(NSString *)text direction:(AnimationDirection)direction
 {
     CGFloat auxLabelOffset = direction * label.height * 0.5;
@@ -114,12 +116,13 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
     UILabel *auxLabel = [[UILabel alloc]initWithFrame:label.frame];
     [label.superview addSubview:({
         auxLabel.backgroundColor = [UIColor clearColor];
+        auxLabel.transform = transTopForm;
         auxLabel.text = text;
-        [auxLabel sizeToFit];
+//        [auxLabel sizeToFit];
+        
         auxLabel.font = label.font;
         auxLabel.textAlignment = label.textAlignment;
         auxLabel.textColor = label.textColor;
-        auxLabel.transform = transTopForm;
         auxLabel;
     })];
     
@@ -127,9 +130,9 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
         auxLabel.transform = CGAffineTransformIdentity;
         label.transform = transDowForm;
     } completion:^(BOOL finished) {
+        label.transform = CGAffineTransformIdentity;
         label.text = auxLabel.text;
         [label sizeToFit];
-        label.transform = CGAffineTransformIdentity;
         [auxLabel removeFromSuperview];
     }];
 }
@@ -160,11 +163,11 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
         auxLabel.transform = CGAffineTransformIdentity;
         auxLabel.alpha = 1.0;
     } completion:^(BOOL finished) {
-        [auxLabel removeFromSuperview];
         label.text = text;
         [label sizeToFit];
         label.alpha = 1.0;
         label.transform = CGAffineTransformIdentity;
+        [auxLabel removeFromSuperview];
     }];
     
 }
