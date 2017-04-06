@@ -63,6 +63,8 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
     if (isAnimated) {
         // 飞机起飞
         [self planeDepart];
+        // 头部标题
+        [self summarySwitch:flightData.summaryStr];
         // 背景图片更换
         [self fadeImageView:[UIImage imageNamed:flightData.weatherImageNameStr] showEffects:flightData.isShowWeatherEffects];
         // 航班号和登机口
@@ -173,6 +175,7 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
         [auxLabel removeFromSuperview];
     }];
 }
+// 飞机起飞喽
 - (void)planeDepart
 {
     CGPoint originalCenter = self.airImageView.center;
@@ -205,6 +208,30 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
         }];
     } completion:nil];
 }
+// 标题
+- (void)summarySwitch:(NSString *)summaryText
+{
+
+    [UIView animateKeyframesWithDuration:1.0 delay:0.0 options:UIViewKeyframeAnimationOptionLayoutSubviews animations:^{
+        
+        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.45 animations:^{
+            self.topImageView.centerY -= 100.0;
+            self.topLabel.centerY -= 100.0;
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.45 animations:^{
+            self.topImageView.centerY += 100.0;
+            self.topLabel.centerY += 100.0;
+        }];
+    } completion:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.topLabel.text = summaryText;
+    });
+    
+}
+
+
 #pragma mark - 懒加载
 - (GPFlighData *)beiJingFlightData
 {
