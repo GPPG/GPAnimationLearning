@@ -57,9 +57,12 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
 - (void)changFlightData:(GPFlighData *)flightData animated:(BOOL)isAnimated
 {
     self.topLabel.text = flightData.summaryStr;
-
+    
     AnimationDirection direction = flightData.isTakingOff ? positive : negative;
+    
     if (isAnimated) {
+        // 飞机起飞
+        [self planeDepart];
         // 背景图片更换
         [self fadeImageView:[UIImage imageNamed:flightData.weatherImageNameStr] showEffects:flightData.isShowWeatherEffects];
         // 航班号和登机口
@@ -169,7 +172,38 @@ typedef NS_ENUM(NSInteger,AnimationDirection){
         label.transform = CGAffineTransformIdentity;
         [auxLabel removeFromSuperview];
     }];
+}
+- (void)planeDepart
+{
+    CGPoint originalCenter = self.airImageView.center;
     
+    [UIView animateKeyframesWithDuration:1.5 delay:0.0 options:UIViewKeyframeAnimationOptionLayoutSubviews animations:^{
+        
+        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.25 animations:^{
+            self.airImageView.centerX += 80.0;
+            self.airImageView.centerY -= 10;
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.1 relativeDuration:0.4 animations:^{
+            self.airImageView.transform = CGAffineTransformMakeRotation(-M_PI / 8);
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.25 relativeDuration:0.25 animations:^{
+            self.airImageView.centerX += 100.0;
+            self.airImageView.centerY -= 50;
+            self.airImageView.alpha = 0.0;
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.51 relativeDuration:0.01 animations:^{
+            self.airImageView.transform = CGAffineTransformIdentity;
+            self.airImageView.center = CGPointMake(0.0, originalCenter.y);
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.55 relativeDuration:0.45 animations:^{
+            self.airImageView.alpha = 1.0;
+            self.airImageView.center = originalCenter;
+        }];
+    } completion:nil];
 }
 #pragma mark - 懒加载
 - (GPFlighData *)beiJingFlightData
