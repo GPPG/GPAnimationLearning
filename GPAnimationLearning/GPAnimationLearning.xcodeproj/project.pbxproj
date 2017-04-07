@@ -17,6 +17,7 @@
 		E0238AF51E8CE29E00B22A29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0238AF31E8CE29E00B22A29 /* LaunchScreen.storyboard */; };
 		E0238B001E8CE29E00B22A29 /* GPAnimationLearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238AFF1E8CE29E00B22A29 /* GPAnimationLearningTests.m */; };
 		E0238B0B1E8CE29E00B22A29 /* GPAnimationLearningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238B0A1E8CE29E00B22A29 /* GPAnimationLearningUITests.m */; };
+		E0457B951E97350800123AB4 /* GPHorizontalItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = E0457B941E97350800123AB4 /* GPHorizontalItemList.m */; };
 		E08398A11E8F954C00624D8A /* UIView+LayoutMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E08398A01E8F954C00624D8A /* UIView+LayoutMethods.m */; };
 		E08398A61E8FA78500624D8A /* GPAirLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08398A51E8FA78500624D8A /* GPAirLoginViewController.m */; };
 		E097C6571E8DFE8E00EB7E15 /* UIViewController+GPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C60B1E8DFE8E00EB7E15 /* UIViewController+GPExtension.m */; };
@@ -98,6 +99,8 @@
 		E0238B061E8CE29E00B22A29 /* GPAnimationLearningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPAnimationLearningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0238B0A1E8CE29E00B22A29 /* GPAnimationLearningUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPAnimationLearningUITests.m; sourceTree = "<group>"; };
 		E0238B0C1E8CE29E00B22A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0457B931E97350800123AB4 /* GPHorizontalItemList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHorizontalItemList.h; sourceTree = "<group>"; };
+		E0457B941E97350800123AB4 /* GPHorizontalItemList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHorizontalItemList.m; sourceTree = "<group>"; };
 		E083989F1E8F954C00624D8A /* UIView+LayoutMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutMethods.h"; sourceTree = "<group>"; };
 		E08398A01E8F954C00624D8A /* UIView+LayoutMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutMethods.m"; sourceTree = "<group>"; };
 		E08398A41E8FA78500624D8A /* GPAirLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAirLoginViewController.h; sourceTree = "<group>"; };
@@ -476,6 +479,8 @@
 		E0BA904C1E9633A400BF7A46 /* 03-auto-layout */ = {
 			isa = PBXGroup;
 			children = (
+				E0457B931E97350800123AB4 /* GPHorizontalItemList.h */,
+				E0457B941E97350800123AB4 /* GPHorizontalItemList.m */,
 				E0BA904D1E9633DA00BF7A46 /* GPPackingListViewController.h */,
 				E0BA904E1E9633DA00BF7A46 /* GPPackingListViewController.m */,
 				E0BA90501E9633EF00BF7A46 /* GPPackingListViewController.storyboard */,
@@ -639,6 +644,7 @@
 				E097C65B1E8DFE8E00EB7E15 /* IQUIView+Hierarchy.m in Sources */,
 				E097C6621E8DFE8E00EB7E15 /* IQPreviousNextView.m in Sources */,
 				E097C6801E8E007C00EB7E15 /* GPViewAnimationViewController.m in Sources */,
+				E0457B951E97350800123AB4 /* GPHorizontalItemList.m in Sources */,
 				E097C6741E8DFE8E00EB7E15 /* SVProgressAnimatedView.m in Sources */,
 				E097C6721E8DFE8E00EB7E15 /* UIView+SDAutoLayout.m in Sources */,
 				E097C6671E8DFE8E00EB7E15 /* MJExtensionConst.m in Sources */,
