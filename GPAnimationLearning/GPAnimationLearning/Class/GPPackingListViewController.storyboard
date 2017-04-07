@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Packing List View Controller-->
         <scene sceneID="dKW-RI-f5Z">
             <objects>
-                <viewController id="DSe-ai-sop" sceneMemberID="viewController">
+                <viewController id="DSe-ai-sop" customClass="GPPackingListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JgQ-m9-8M6"/>
                         <viewControllerLayoutGuide type="bottom" id="Cv1-Y0-e4A"/>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oyR-3w-RVG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="oyR-3w-RVG">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oyR-3w-RVG" id="o46-H1-edv">
@@ -48,10 +48,13 @@
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="rootTableView" destination="DRV-lf-16p" id="Ko6-Ob-rtD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsT-Ub-FEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-282" y="100"/>
+            <point key="canvasLocation" x="-596" y="-189"/>
         </scene>
     </scenes>
 </document>
