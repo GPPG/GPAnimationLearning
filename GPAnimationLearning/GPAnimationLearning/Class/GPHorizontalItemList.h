@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GPHorizontalItemList : UIScrollView
+typedef void(^didSelectItemBlock)(NSInteger index);
 
+@interface GPHorizontalItemList : UIScrollView
+@property (nonatomic, copy) didSelectItemBlock didSelectItemBlock;
+- (instancetype)initWithView:(UIView *)view;
+- (void)didMoveToSuperview;
 @end
