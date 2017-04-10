@@ -48,8 +48,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POo-0T-a7M">
-                                        <rect key="frame" x="320" y="8" width="30" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="320" y="11" width="30" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="+">
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -62,9 +62,10 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="POo-0T-a7M" secondAttribute="trailing" constant="25" id="2x1-Pe-bf4"/>
                                     <constraint firstItem="63i-4l-wyT" firstAttribute="centerX" secondItem="fya-uS-PMw" secondAttribute="centerX" id="7xw-LL-td4"/>
-                                    <constraint firstItem="POo-0T-a7M" firstAttribute="centerY" secondItem="fya-uS-PMw" secondAttribute="centerY" id="a9Y-nM-Gf0"/>
                                     <constraint firstItem="63i-4l-wyT" firstAttribute="centerY" secondItem="fya-uS-PMw" secondAttribute="centerY" id="ebg-ub-z9X"/>
+                                    <constraint firstItem="63i-4l-wyT" firstAttribute="centerY" secondItem="fya-uS-PMw" secondAttribute="centerY" id="nA1-fd-59J"/>
                                     <constraint firstAttribute="height" constant="64" id="rHs-zs-Ozy"/>
+                                    <constraint firstItem="POo-0T-a7M" firstAttribute="centerY" secondItem="63i-4l-wyT" secondAttribute="centerY" id="yOZ-qk-CoR"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -80,6 +80,8 @@
             };
             self.horizonListView = listView;
         })];
+    }else{
+        [self.horizonListView removeFromSuperview];
     }
 }
 #pragma mark - 表格数据源

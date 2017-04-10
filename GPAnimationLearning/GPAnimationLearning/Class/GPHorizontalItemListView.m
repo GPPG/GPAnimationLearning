@@ -34,6 +34,7 @@
     CGRect rect = CGRectMake(self.supview.width, 120, self.supview.width, 80);
     self.frame = rect;
     self.alpha = 0.0;
+    self.contentSize = CGSizeMake(padding * buttonWidth, buttonWidth + 2 * padding);
 }
 - (void)addSubView
 {
