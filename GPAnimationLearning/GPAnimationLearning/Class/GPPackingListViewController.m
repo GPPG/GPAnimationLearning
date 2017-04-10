@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *rootTableView;
 @property (nonatomic, strong) GPHorizontalItemListView *horizonListView;
 @property (nonatomic,strong) NSArray *titleArray;
-@property (nonatomic, strong) NSArray *cellTitleArray;
+@property (nonatomic, strong) NSMutableArray *cellTitleArray;
 @property (nonatomic, assign,getter=isMenuOpen) BOOL menuOpen;
 // 约束
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleCenterX;
@@ -69,10 +69,17 @@
     
     // 添加选择栏
     if (self.isMenuOpen) {
-     
-        
-        
-        
+        GPWeakSelf(self);
+        [self.view addSubview:({
+            GPHorizontalItemListView *listView = [[GPHorizontalItemListView alloc]initWithView:self.view];
+            listView.didSelectItemBlock = ^(NSInteger index) {
+                NSString *tempStr = [NSString stringWithFormat:@"%ld",index];
+                [weakself.cellTitleArray addObject:tempStr];
+                [weakself.rootTableView reloadData];
+                [weakself addbtnClick:self.addBtn];
+            };
+            self.horizonListView = listView;
+        })];
     }
 }
 #pragma mark - 表格数据源
@@ -96,10 +103,10 @@
     }
     return _titleArray;
 }
-- (NSArray *)cellTitleArray
+- (NSMutableArray *)cellTitleArray
 {
     if (!_cellTitleArray) {
-        _cellTitleArray = @[@"5",@"6",@"7"];
+        _cellTitleArray = [NSMutableArray arrayWithObjects:@"5",@"6",@"7",nil];
     }
     return _cellTitleArray;
 }
