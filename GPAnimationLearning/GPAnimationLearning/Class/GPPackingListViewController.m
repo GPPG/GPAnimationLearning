@@ -97,11 +97,16 @@
         imageView;
     })];
     
-    imageView.sd_layout.centerXEqualToView(self.view).bottomSpaceToView(self.view, -50).widthRatioToView(self.view, 0.3).heightEqualToWidth();
+    imageView.sd_layout.centerXEqualToView(self.view).bottomSpaceToView(self.view, -150).widthRatioToView(self.view, 0.3).heightEqualToWidth();
     [imageView updateLayout];
 
     [UIView animateWithDuration:0.8 delay:0.0 usingSpringWithDamping:0.4 initialSpringVelocity:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
         imageView.sd_layout.bottomSpaceToView(self.view, 50).widthRatioToView(self.view, 0.4);
+        [imageView updateLayout];
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.8 delay:1.0 usingSpringWithDamping:0.4 initialSpringVelocity:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+        imageView.sd_layout.centerXEqualToView(self.view).bottomSpaceToView(self.view, -150).widthRatioToView(self.view, 0.3).heightEqualToWidth();
         [imageView updateLayout];
     } completion:nil];
 }
