@@ -84,6 +84,27 @@
         [self.horizonListView removeFromSuperview];
     }
 }
+
+#pragma mark - 动画相关
+- (void)showItem:(NSString *)indexStr
+{
+    NSString *tempStr = [NSString stringWithFormat:@"summericons_100px_0%@",indexStr];
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:tempStr]];
+    [self.view addSubview:({
+        imageView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        imageView.layer.cornerRadius = 5.0;
+        imageView.layer.masksToBounds = YES;
+        imageView;
+    })];
+    
+    imageView.sd_layout.centerXEqualToView(self.view).bottomSpaceToView(self.view, -50).widthRatioToView(self.view, 0.3).heightEqualToWidth();
+    [imageView updateLayout];
+
+    [UIView animateWithDuration:0.8 delay:0.0 usingSpringWithDamping:0.4 initialSpringVelocity:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+        imageView.sd_layout.bottomSpaceToView(self.view, 50).widthRatioToView(self.view, 0.4);
+        [imageView updateLayout];
+    } completion:nil];
+}
 #pragma mark - 表格数据源
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -96,6 +117,11 @@
     NSString *tempStr = [NSString stringWithFormat:@"summericons_100px_0%@",self.cellTitleArray[indexPath.row]];
     cell.imageView.image = [UIImage imageNamed:tempStr];
     return cell;
+}
+#pragma mark - 表格代理
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self showItem:self.cellTitleArray[indexPath.row]];
 }
 #pragma mark - 懒加载
 - (NSArray *)titleArray
