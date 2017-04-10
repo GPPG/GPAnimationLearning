@@ -6,15 +6,15 @@
 //  Copyright © 2017年 郭鹏. All rights reserved.
 //
 
-#import "GPHorizontalItemList.h"
+#import "GPHorizontalItemListView.h"
 
-@interface GPHorizontalItemList()
+@interface GPHorizontalItemListView()
 @property (nonatomic, strong) UIView *supview;
 
 @end
 
 
-@implementation GPHorizontalItemList
+@implementation GPHorizontalItemListView
 
 #define buttonWidth 60
 #define padding 10

@@ -47,8 +47,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POo-0T-a7M">
-                                        <rect key="frame" x="328" y="21" width="22" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POo-0T-a7M">
+                                        <rect key="frame" x="320" y="8" width="30" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="addbtnClick:" destination="DSe-ai-sop" eventType="touchUpInside" id="1cg-cm-nG8"/>
                                         </connections>
@@ -77,13 +81,17 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="addBtn" destination="POo-0T-a7M" id="99Y-4n-aCK"/>
                         <outlet property="rootTableView" destination="DRV-lf-16p" id="Ko6-Ob-rtD"/>
+                        <outlet property="titleCenterX" destination="7xw-LL-td4" id="4Dm-KW-ZTL"/>
+                        <outlet property="titleCenterY" destination="ebg-ub-z9X" id="rW7-eh-Y67"/>
                         <outlet property="titleLabel" destination="63i-4l-wyT" id="981-XQ-lhb"/>
+                        <outlet property="topViewH" destination="rHs-zs-Ozy" id="ewy-r0-gJk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsT-Ub-FEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-906" y="-261"/>
+            <point key="canvasLocation" x="-906.39999999999998" y="-261.31934032983509"/>
         </scene>
     </scenes>
 </document>

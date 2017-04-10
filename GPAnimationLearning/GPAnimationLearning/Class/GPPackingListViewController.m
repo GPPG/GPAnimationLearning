@@ -7,13 +7,21 @@
 //  Copyright © 2017年 郭鹏. All rights reserved.
 //
 #import "GPPackingListViewController.h"
+#import "GPHorizontalItemListView.h"
 
 @interface GPPackingListViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIButton *addBtn;
 - (IBAction)addbtnClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITableView *rootTableView;
+@property (nonatomic, strong) GPHorizontalItemListView *horizonListView;
 @property (nonatomic,strong) NSArray *titleArray;
 @property (nonatomic, strong) NSArray *cellTitleArray;
+@property (nonatomic, assign,getter=isMenuOpen) BOOL menuOpen;
+// 约束
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleCenterX;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleCenterY;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewH;
 @end
 
 @implementation GPPackingListViewController
@@ -41,7 +49,31 @@
 #pragma mark - 内部方法
 - (IBAction)addbtnClick:(id)sender {
  
+    self.menuOpen = !self.menuOpen;
+    // 更新标题动画
+    self.titleCenterX.constant = self.isMenuOpen ? -100.0 : 0.0;
+    self.titleCenterY.constant = self.isMenuOpen ? -25 : 0.0;
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
     
+    // 更新标题视图动画
+    self.topViewH.constant = self.isMenuOpen ? 200.0 : 60.0;
+    self.titleLabel.text = self.isMenuOpen ? @"选择物品" : @"购物列表";
+
+    [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.4 initialSpringVelocity:10.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        CGFloat angle = self.isMenuOpen ? M_PI * 0.25 : 0.0;
+        self.addBtn.transform = CGAffineTransformMakeRotation(angle);
+        [self.view layoutIfNeeded];
+    } completion:nil];
+    
+    // 添加选择栏
+    if (self.isMenuOpen) {
+     
+        
+        
+        
+    }
 }
 #pragma mark - 表格数据源
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

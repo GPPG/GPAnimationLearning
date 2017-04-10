@@ -10,7 +10,7 @@
 
 typedef void(^didSelectItemBlock)(NSInteger index);
 
-@interface GPHorizontalItemList : UIScrollView
+@interface GPHorizontalItemListView : UIScrollView
 @property (nonatomic, copy) didSelectItemBlock didSelectItemBlock;
 - (instancetype)initWithView:(UIView *)view;
 - (void)didMoveToSuperview;
