@@ -98,67 +98,57 @@
     self.passcodeTextField.alpha = 0.0;
     self.titleLabel.alpha = 0.0;
     
-    self.tittleCenterYLayout.constant -= SCREEN_WIDTH;
-    self.phoneCenterYLayout.constant -= SCREEN_WIDTH;
-    self.passcodeCenterYLayout.constant -= SCREEN_WIDTH;
     self.loginBtnCenterYYLayout.constant += 30;
     self.loginBtn.alpha = 0.0;
-    self.clound1.alpha = 0.0;
-    self.clound2.alpha = 0.0;
-    self.clound3.alpha = 0.0;
-    self.clound4.alpha = 0.0;
+    // 透明度
+    CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fadeIn.fromValue = @(0.0);
+    fadeIn.toValue = @(1.0);
+    fadeIn.duration = 0.5;
+    fadeIn.fillMode = kCAFillModeBoth;
+    fadeIn.beginTime = CACurrentMediaTime() + 0.5;
+    [self.clound1.layer addAnimation:fadeIn forKey:nil];
     
+    fadeIn.beginTime = CACurrentMediaTime() + 0.7;
+    [self.clound2.layer addAnimation:fadeIn forKey:nil];
     
+    fadeIn.beginTime = CACurrentMediaTime() + 0.9;
+    [self.clound3.layer addAnimation:fadeIn forKey:nil];
+    
+    fadeIn.beginTime = CACurrentMediaTime() + 1.1;
+    [self.clound4.layer addAnimation:fadeIn forKey:nil];    
 }
 - (void)loadAnimation
 {
     self.phoneTextField.alpha = 1.0;
     self.passcodeTextField.alpha = 1.0;
     self.titleLabel.alpha = 1.0;
-    // view 动画
-    [UIView animateWithDuration:0.5 animations:^{
-        self.tittleCenterYLayout.constant += SCREEN_WIDTH;
-        [self.view layoutIfNeeded];
-    }];
+    // layer动画
+    // 位置
+    CABasicAnimation *flyRight = [CABasicAnimation animationWithKeyPath:@"position.x"];
+    flyRight.fromValue = @(-SCREEN_WIDTH * 0.5);
+    flyRight.toValue = @(SCREEN_WIDTH * 0.5);
+    flyRight.duration = 0.5;
+    [self.titleLabel.layer addAnimation:flyRight forKey:nil];
     
-    [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        self.phoneCenterYLayout.constant += SCREEN_WIDTH;
-        [self.view layoutIfNeeded];
-    } completion:nil];
+    flyRight.beginTime = CACurrentMediaTime() + 0.3;
+    flyRight.fillMode = kCAFillModeBoth;
+    [self.phoneTextField.layer addAnimation:flyRight forKey:nil];
     
-    [UIView animateWithDuration:0.5 delay:0.4 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        self.passcodeCenterYLayout.constant += SCREEN_WIDTH;
-        [self.view layoutIfNeeded];
-    } completion:nil];
+    flyRight.beginTime = CACurrentMediaTime() + 0.4;
+    [self.passcodeTextField.layer addAnimation:flyRight forKey:nil];
     
-    [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        self.clound1.alpha = 1.0;
-    } completion:nil];
-    
-    [UIView animateWithDuration:0.5 delay:0.7 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        self.clound2.alpha = 1.0;
-    } completion:nil];
-    
-    [UIView animateWithDuration:0.5 delay:0.9 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        self.clound3.alpha = 1.0;
-    } completion:nil];
-    
-    [UIView animateWithDuration:0.5 delay:1.1 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        self.clound4.alpha = 1.0;
-    } completion:nil];
-
-    // spring动画
+        // spring动画
     [UIView animateWithDuration:0.5 delay:0.4 options:UIViewAnimationOptionLayoutSubviews animations:^{
         self.loginBtn.alpha = 1.0;
         self.loginBtnCenterYYLayout.constant -= 30;
         [self.view layoutIfNeeded];
     } completion:nil];
-    
+   
     [self animateCloud:self.clound1];
     [self animateCloud:self.clound2];
     [self animateCloud:self.clound3];
     [self animateCloud:self.clound4];
-
 }
 
 - (void)showMessage:(NSInteger)messageInt

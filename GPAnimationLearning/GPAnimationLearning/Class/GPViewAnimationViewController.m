@@ -7,6 +7,7 @@
 //
 
 #import "GPViewAnimationViewController.h"
+#import <CoreFoundation/CoreFoundation.h>
 
 @interface GPViewAnimationViewController ()
 // 控件
@@ -102,23 +103,25 @@
     self.phoneCenterYLayout.constant -= SCREEN_WIDTH;
     self.passcodeCenterYLayout.constant -= SCREEN_WIDTH;
     self.loginBtnCenterYYLayout.constant += 30;
+    
     self.loginBtn.alpha = 0.0;
     self.clound1.alpha = 0.0;
     self.clound2.alpha = 0.0;
     self.clound3.alpha = 0.0;
     self.clound4.alpha = 0.0;
+    
 }
 - (void)loadAnimation
 {
     self.phoneTextField.alpha = 1.0;
     self.passcodeTextField.alpha = 1.0;
     self.titleLabel.alpha = 1.0;
+    
     // view 动画
     [UIView animateWithDuration:0.5 animations:^{
         self.tittleCenterYLayout.constant += SCREEN_WIDTH;
         [self.view layoutIfNeeded];
     }];
-    
     [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionLayoutSubviews animations:^{
         self.phoneCenterYLayout.constant += SCREEN_WIDTH;
         [self.view layoutIfNeeded];
@@ -144,7 +147,7 @@
     [UIView animateWithDuration:0.5 delay:1.1 options:UIViewAnimationOptionLayoutSubviews animations:^{
         self.clound4.alpha = 1.0;
     } completion:nil];
-
+    
     // spring动画
     [UIView animateWithDuration:0.5 delay:0.4 options:UIViewAnimationOptionLayoutSubviews animations:^{
         self.loginBtn.alpha = 1.0;
@@ -156,9 +159,7 @@
     [self animateCloud:self.clound2];
     [self animateCloud:self.clound3];
     [self animateCloud:self.clound4];
-
 }
-
 - (void)showMessage:(NSInteger)messageInt
 {
     self.statusLabel.text = self.titleArray[messageInt];
