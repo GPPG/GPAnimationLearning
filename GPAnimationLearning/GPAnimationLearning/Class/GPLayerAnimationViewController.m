@@ -94,6 +94,10 @@
 #pragma mark - 动画相关
 - (void)setupAnimation
 {
+    self.phoneTextField.alpha = 0.0;
+    self.passcodeTextField.alpha = 0.0;
+    self.titleLabel.alpha = 0.0;
+    
     self.tittleCenterYLayout.constant -= SCREEN_WIDTH;
     self.phoneCenterYLayout.constant -= SCREEN_WIDTH;
     self.passcodeCenterYLayout.constant -= SCREEN_WIDTH;
@@ -108,6 +112,9 @@
 }
 - (void)loadAnimation
 {
+    self.phoneTextField.alpha = 1.0;
+    self.passcodeTextField.alpha = 1.0;
+    self.titleLabel.alpha = 1.0;
     // view 动画
     [UIView animateWithDuration:0.5 animations:^{
         self.tittleCenterYLayout.constant += SCREEN_WIDTH;

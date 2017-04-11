@@ -10,6 +10,7 @@
 #import "GPViewAnimationViewController.h"
 #import "GPAirLoginViewController.h"
 #import "GPPackingListViewController.h"
+#import "GPLayerAnimationViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *rootTableView;
@@ -72,7 +73,7 @@ static NSString * const oneCellID = @"oneCellID";
 - (NSArray *)titleArray
 {
     if (!_titleArray) {
-        _titleArray = @[@"01-View&Spring&Transitions",@"02-View&KeyFrame",@"03-auto-layout"];
+        _titleArray = @[@"01-View&Spring&Transitions",@"02-View&KeyFrame",@"03-auto-layout",@"04-Layer"];
     }
     return _titleArray;
 }
@@ -80,7 +81,7 @@ static NSString * const oneCellID = @"oneCellID";
 - (NSArray *)subVcArray
 {
     if (!_subVcArray) {
-        _subVcArray = @[[GPViewAnimationViewController class],[GPAirLoginViewController class],[GPPackingListViewController class]];
+        _subVcArray = @[[GPViewAnimationViewController class],[GPAirLoginViewController class],[GPPackingListViewController class],[GPLayerAnimationViewController class]];
     }
     return _subVcArray;
 }
