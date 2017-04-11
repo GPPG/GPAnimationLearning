@@ -100,7 +100,8 @@
     
     self.loginBtnCenterYYLayout.constant += 30;
     self.loginBtn.alpha = 0.0;
-    // 透明度
+    // layer动画
+        // 透明度
     CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
     fadeIn.fromValue = @(0.0);
     fadeIn.toValue = @(1.0);
@@ -124,7 +125,7 @@
     self.passcodeTextField.alpha = 1.0;
     self.titleLabel.alpha = 1.0;
     // layer动画
-    // 位置
+        // 位置
     CABasicAnimation *flyRight = [CABasicAnimation animationWithKeyPath:@"position.x"];
     flyRight.fromValue = @(-SCREEN_WIDTH * 0.5);
     flyRight.toValue = @(SCREEN_WIDTH * 0.5);
@@ -137,7 +138,7 @@
     
     flyRight.beginTime = CACurrentMediaTime() + 0.4;
     [self.passcodeTextField.layer addAnimation:flyRight forKey:nil];
-    
+    // view动画
         // spring动画
     [UIView animateWithDuration:0.5 delay:0.4 options:UIViewAnimationOptionLayoutSubviews animations:^{
         self.loginBtn.alpha = 1.0;

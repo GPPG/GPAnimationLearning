@@ -301,7 +301,7 @@
 				E097C6791E8E001700EB7E15 /* 01-View&Spring&Transitions */,
 				E08398A31E8FA6B600624D8A /* 02-ViewPractice&keyFrame */,
 				E0BA904C1E9633A400BF7A46 /* 03-View-auto-layout */,
-				E0FCDB131E9B63E200B7E0BC /* 04-Layer */,
+				E0FCDB131E9B63E200B7E0BC /* 04-Layer-CABasic-CAKeyframe-CAGroup */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -494,14 +494,14 @@
 			name = "03-View-auto-layout";
 			sourceTree = "<group>";
 		};
-		E0FCDB131E9B63E200B7E0BC /* 04-Layer */ = {
+		E0FCDB131E9B63E200B7E0BC /* 04-Layer-CABasic-CAKeyframe-CAGroup */ = {
 			isa = PBXGroup;
 			children = (
 				E05530C21E9C8C0000B65DCB /* GPLayerAnimationViewController.h */,
 				E05530C31E9C8C0000B65DCB /* GPLayerAnimationViewController.m */,
 				E05530C41E9C8C0000B65DCB /* GPLayerAnimationViewController.storyboard */,
 			);
-			name = "04-Layer";
+			name = "04-Layer-CABasic-CAKeyframe-CAGroup";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
