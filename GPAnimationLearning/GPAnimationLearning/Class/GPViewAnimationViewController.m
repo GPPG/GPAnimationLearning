@@ -107,8 +107,6 @@
     self.clound2.alpha = 0.0;
     self.clound3.alpha = 0.0;
     self.clound4.alpha = 0.0;
-    
-    
 }
 - (void)loadAnimation
 {
