@@ -202,7 +202,10 @@
         self.loginBtn.width -= 80;
         self.loginBtnCenterYYLayout.constant -= 60.0;
         [self.view layoutIfNeeded];
-    } completion:nil];
+    } completion:^(BOOL finished){
+        self.loginBtn.enabled = YES;
+    }];
+    
 }
 
 - (void)animateCloud:(UIImageView *)cloundImageView
