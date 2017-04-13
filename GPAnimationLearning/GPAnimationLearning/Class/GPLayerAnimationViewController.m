@@ -8,7 +8,7 @@
 
 #import "GPLayerAnimationViewController.h"
 
-@interface GPLayerAnimationViewController ()
+@interface GPLayerAnimationViewController ()<UITextFieldDelegate>
 // 控件
 @property (weak, nonatomic) IBOutlet UIImageView *clound1;
 @property (weak, nonatomic) IBOutlet UIImageView *clound2;
@@ -22,6 +22,7 @@
 @property (nonatomic, strong) UIImageView *statusImageView;
 @property (nonatomic, strong) UILabel *statusLabel;
 @property (nonatomic, assign) CGPoint initialPoint;
+@property (nonatomic, strong) UILabel *infoLabel;
 // 控件约束
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tittleCenterYLayout;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *phoneCenterYLayout;
@@ -90,6 +91,18 @@
         self.statusLabel = statusLabel;
         statusLabel;
     })];
+    
+    // 添加提示文本框
+    [self.view addSubview:({
+        UILabel *infoLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, self.loginBtn.centerY + 60, SCREEN_WIDTH, 30)];
+        infoLabel.backgroundColor = [UIColor clearColor];
+        infoLabel.font = [UIFont systemFontOfSize:12];
+        infoLabel.textAlignment = NSTextAlignmentCenter;
+        infoLabel.textColor = [UIColor whiteColor];
+        infoLabel.text = @"请点击文本框输入账号和密码";
+        self.infoLabel = infoLabel;
+    })];
+    
 }
 #pragma mark - 动画相关
 - (void)setupAnimation
@@ -145,7 +158,7 @@
         self.loginBtnCenterYYLayout.constant -= 30;
         [self.view layoutIfNeeded];
     } completion:nil];
-   
+
     [self animateCloud:self.clound1];
     [self animateCloud:self.clound2];
     [self animateCloud:self.clound3];
@@ -209,6 +222,11 @@
         [self animateCloud:cloundImageView];
         [self.view layoutIfNeeded];
     }];
+}
+#pragma mark - 文本框代理
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
 }
 #pragma mark - 内部方法
 - (IBAction)loginBtnClick:(id)sender {
