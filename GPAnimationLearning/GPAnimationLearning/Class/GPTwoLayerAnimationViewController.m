@@ -110,8 +110,8 @@
     self.titleLabel.alpha = 0.0;
     self.infoLabel.alpha = 0.0;
     
-    self.loginBtnCenterYYLayout.constant += 30;
-    self.loginBtn.alpha = 0.0;
+//    self.loginBtnCenterYYLayout.constant += 30;
+//    self.loginBtn.alpha = 0.0;
     // layer动画
         // 透明度
     CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:animationOpacity];
@@ -172,14 +172,30 @@
     fadeLabelIn.duration = 4.5;
     [self.infoLabel.layer addAnimation:fadeLabelIn forKey:@"fadein"];
 
+        // layer的动画组
+    CAAnimationGroup *loginAnimationGroup = [CAAnimationGroup animation];
+    loginAnimationGroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    loginAnimationGroup.duration = 0.5;
+    loginAnimationGroup.beginTime = CACurrentMediaTime() + 0.5;
+    loginAnimationGroup.fillMode = kCAFillModeBackwards;
     
-    // view动画
-        // spring动画
-    [UIView animateWithDuration:0.5 delay:0.4 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        self.loginBtn.alpha = 1.0;
-        self.loginBtnCenterYYLayout.constant -= 30;
-        [self.view layoutIfNeeded];
-    } completion:nil];
+    CABasicAnimation *scaleDown = [CABasicAnimation animationWithKeyPath:animationSacle];
+    scaleDown.fromValue = @(3.5);
+    scaleDown.toValue = @(1.0);
+    
+    CABasicAnimation *rotate = [CABasicAnimation animationWithKeyPath:animationRotation];
+    scaleDown.fromValue = @(3.5);
+    scaleDown.toValue = @(1.0);
+    
+    
+    
+//    // view动画
+//        // spring动画
+//    [UIView animateWithDuration:0.5 delay:0.4 options:UIViewAnimationOptionLayoutSubviews animations:^{
+//        self.loginBtn.alpha = 1.0;
+//        self.loginBtnCenterYYLayout.constant -= 30;
+//        [self.view layoutIfNeeded];
+//    } completion:nil];
 
     [self animateCloud:self.clound1.layer];
     [self animateCloud:self.clound2.layer];
