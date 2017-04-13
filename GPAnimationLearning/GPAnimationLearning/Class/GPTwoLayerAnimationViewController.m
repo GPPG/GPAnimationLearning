@@ -140,41 +140,34 @@
     self.loginBtn.alpha = 1.0;
     
     // layer动画
-        // 位置
+        // 动画组
+    CAAnimationGroup *textFiledGroup = [CAAnimationGroup animation];
+    textFiledGroup.duration = 0.5;
+    textFiledGroup.fillMode = kCAFillModeBackwards;
+    textFiledGroup.delegate = self;
+    [textFiledGroup setValue:@"form" forKey:@"name"];
+
+    
     CABasicAnimation *flyRight = [CABasicAnimation animationWithKeyPath:animationX];
     flyRight.fromValue = @(-SCREEN_WIDTH * 0.5);
     flyRight.toValue = @(SCREEN_WIDTH * 0.5);
-    flyRight.duration = 0.5;
-    flyRight.delegate = self;
-    [flyRight setValue:@"form" forKey:@"name"];
-    [flyRight setValue:self.titleLabel.layer forKey:@"layer"];
-    
-    [self.titleLabel.layer addAnimation:flyRight forKey:nil];
-    
-    flyRight.beginTime = CACurrentMediaTime() + 0.3;
-    flyRight.fillMode = kCAFillModeBoth;
-    [flyRight setValue:self.phoneTextField.layer forKey:@"layer"];
-    [self.phoneTextField.layer addAnimation:flyRight forKey:nil];
-    
-    flyRight.beginTime = CACurrentMediaTime() + 0.4;
-    [flyRight setValue:self.passcodeTextField.layer forKey:@"layer"];
-    [self.passcodeTextField.layer addAnimation:flyRight forKey:nil];
-    
-        // layer的key
-    CABasicAnimation *flyLeft = [CABasicAnimation animationWithKeyPath:animationX];
-    flyLeft.fromValue = @(self.infoLabel.centerX + SCREEN_WIDTH);
-    flyLeft.toValue = @(self.infoLabel.centerX);
-    flyLeft.duration = 5.0;
-    flyLeft.repeatCount = 4;
-    flyLeft.autoreverses = YES;
-    [self.infoLabel.layer addAnimation:flyLeft forKey:@"infoappear"];
-    
-    CABasicAnimation *fadeLabelIn = [CABasicAnimation animationWithKeyPath:animationOpacity];
-    fadeLabelIn.fromValue = @(0.2);
-    fadeLabelIn.toValue = @(1.0);
-    fadeLabelIn.duration = 4.5;
-    [self.infoLabel.layer addAnimation:fadeLabelIn forKey:@"fadein"];
 
+    CABasicAnimation *fadeFieldIn = [CABasicAnimation animationWithKeyPath:animationOpacity];
+    fadeFieldIn.fromValue = @(0.25);
+    fadeFieldIn.toValue = @(1.0);
+    textFiledGroup.animations = @[flyRight,fadeFieldIn];
+    
+    [textFiledGroup setValue:self.titleLabel.layer forKey:@"layer"];
+    [self.titleLabel.layer addAnimation:textFiledGroup forKey:nil];
+    
+    textFiledGroup.beginTime = CACurrentMediaTime() + 0.3;
+    flyRight.fillMode = kCAFillModeBoth;
+    [textFiledGroup setValue:self.phoneTextField.layer forKey:@"layerr"];
+    [self.phoneTextField.layer addAnimation:textFiledGroup forKey:nil];
+    
+    textFiledGroup.beginTime = CACurrentMediaTime() + 0.4;
+    [textFiledGroup setValue:self.passcodeTextField.layer forKey:@"layerrr"];
+    [self.passcodeTextField.layer addAnimation:textFiledGroup forKey:nil];
         // layer的动画组
     CAAnimationGroup *loginAnimationGroup = [CAAnimationGroup animation];
     loginAnimationGroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
@@ -195,17 +188,21 @@
     fade.toValue = @(1.0);
     loginAnimationGroup.animations = @[scaleDown,rotate,fade];
     [self.loginBtn.layer addAnimation:loginAnimationGroup forKey:nil];
+    // layer的key
+    CABasicAnimation *flyLeft = [CABasicAnimation animationWithKeyPath:animationX];
+    flyLeft.fromValue = @(self.infoLabel.centerX + SCREEN_WIDTH);
+    flyLeft.toValue = @(self.infoLabel.centerX);
+    flyLeft.duration = 5.0;
+    flyLeft.repeatCount = 4;
+    flyLeft.autoreverses = YES;
+    [self.infoLabel.layer addAnimation:flyLeft forKey:@"infoappear"];
     
-    
-    
-//    // view动画
-//        // spring动画
-//    [UIView animateWithDuration:0.5 delay:0.4 options:UIViewAnimationOptionLayoutSubviews animations:^{
-//        self.loginBtn.alpha = 1.0;
-//        self.loginBtnCenterYYLayout.constant -= 30;
-//        [self.view layoutIfNeeded];
-//    } completion:nil];
-
+    CABasicAnimation *fadeLabelIn = [CABasicAnimation animationWithKeyPath:animationOpacity];
+    fadeLabelIn.fromValue = @(0.2);
+    fadeLabelIn.toValue = @(1.0);
+    fadeLabelIn.duration = 4.5;
+    [self.infoLabel.layer addAnimation:fadeLabelIn forKey:@"fadein"];
+        // 白云
     [self animateCloud:self.clound1.layer];
     [self animateCloud:self.clound2.layer];
     [self animateCloud:self.clound3.layer];
@@ -301,11 +298,16 @@
 {
     if ([[anim valueForKey:@"name"] isEqualToString:@"form"]) {
         CALayer *layer = [anim valueForKey:@"layer"];
+        CALayer *layerr = [anim valueForKey:@"layerr"];
+        CALayer *layerrr = [anim valueForKey:@"layerrr"];
+
         CABasicAnimation *pulse = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
         pulse.fromValue = @(1.5);
         pulse.toValue = @(1.0);
         pulse.duration = 0.25;
         [layer addAnimation:pulse forKey:nil];
+        [layerr addAnimation:pulse forKey:nil];
+        [layerrr addAnimation:pulse forKey:nil];
     }
     
     if ([[anim valueForKey:@"name"] isEqualToString:@"cloud"]) {
