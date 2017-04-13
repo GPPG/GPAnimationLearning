@@ -111,7 +111,7 @@
     self.infoLabel.alpha = 0.0;
     
 //    self.loginBtnCenterYYLayout.constant += 30;
-//    self.loginBtn.alpha = 0.0;
+    self.loginBtn.alpha = 0.0;
     // layer动画
         // 透明度
     CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:animationOpacity];
@@ -137,6 +137,7 @@
     self.passcodeTextField.alpha = 1.0;
     self.titleLabel.alpha = 1.0;
     self.infoLabel.alpha = 1.0;
+    self.loginBtn.alpha = 1.0;
     
     // layer动画
         // 位置
@@ -164,6 +165,8 @@
     flyLeft.fromValue = @(self.infoLabel.centerX + SCREEN_WIDTH);
     flyLeft.toValue = @(self.infoLabel.centerX);
     flyLeft.duration = 5.0;
+    flyLeft.repeatCount = 4;
+    flyLeft.autoreverses = YES;
     [self.infoLabel.layer addAnimation:flyLeft forKey:@"infoappear"];
     
     CABasicAnimation *fadeLabelIn = [CABasicAnimation animationWithKeyPath:animationOpacity];
@@ -184,8 +187,14 @@
     scaleDown.toValue = @(1.0);
     
     CABasicAnimation *rotate = [CABasicAnimation animationWithKeyPath:animationRotation];
-    scaleDown.fromValue = @(3.5);
-    scaleDown.toValue = @(1.0);
+    rotate.fromValue = @(M_PI / 4.0);
+    rotate.toValue = @(0.0);
+    
+    CABasicAnimation *fade = [CABasicAnimation animationWithKeyPath:animationOpacity];
+    fade.fromValue = @(0.0);
+    fade.toValue = @(1.0);
+    loginAnimationGroup.animations = @[scaleDown,rotate,fade];
+    [self.loginBtn.layer addAnimation:loginAnimationGroup forKey:nil];
     
     
     
