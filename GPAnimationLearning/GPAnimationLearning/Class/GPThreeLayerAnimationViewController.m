@@ -276,8 +276,7 @@
     round.damping = 5.0;
     round.fromValue = @(layer.cornerRadius);
     round.toValue = @(radius);
-    round.duration = round.settlingDuration;
-    [layer addAnimation:round forKey:nil];
+    round.duration = round.settlingDuration;    [layer addAnimation:round forKey:nil];
     layer.cornerRadius = radius;
 }
 - (void)tintBackgroundColor:(CALayer *)layer toColor:(UIColor *)toColor
