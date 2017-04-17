@@ -20,8 +20,8 @@
 		E0457B951E97350800123AB4 /* GPHorizontalItemListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0457B941E97350800123AB4 /* GPHorizontalItemListView.m */; };
 		E05530C51E9C8C0000B65DCB /* GPLayerAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05530C31E9C8C0000B65DCB /* GPLayerAnimationViewController.m */; };
 		E05530C61E9C8C0000B65DCB /* GPLayerAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05530C41E9C8C0000B65DCB /* GPLayerAnimationViewController.storyboard */; };
-		E07576CD1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07576CA1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.storyboard */; };
-		E07576CE1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07576CC1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.m */; };
+		E07576CD1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07576CA1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.storyboard */; };
+		E07576CE1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E07576CC1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.m */; };
 		E08398A11E8F954C00624D8A /* UIView+LayoutMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E08398A01E8F954C00624D8A /* UIView+LayoutMethods.m */; };
 		E08398A61E8FA78500624D8A /* GPAirLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08398A51E8FA78500624D8A /* GPAirLoginViewController.m */; };
 		E097C6571E8DFE8E00EB7E15 /* UIViewController+GPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C60B1E8DFE8E00EB7E15 /* UIViewController+GPExtension.m */; };
@@ -60,6 +60,8 @@
 		E097C67D1E8E005300EB7E15 /* GPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C67C1E8E005300EB7E15 /* GPBaseViewController.m */; };
 		E097C6801E8E007C00EB7E15 /* GPViewAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E097C67F1E8E007C00EB7E15 /* GPViewAnimationViewController.m */; };
 		E097C6821E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E097C6811E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard */; };
+		E09D5CDB1EA4B249002AFA74 /* GPTwoLayerAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09D5CD91EA4B249002AFA74 /* GPTwoLayerAnimationViewController.m */; };
+		E09D5CDC1EA4B249002AFA74 /* GPTwoLayerAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09D5CDA1EA4B249002AFA74 /* GPTwoLayerAnimationViewController.storyboard */; };
 		E0B951F41E928028007B30D2 /* GPAirLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B951F31E928028007B30D2 /* GPAirLoginViewController.storyboard */; };
 		E0BA904F1E9633DA00BF7A46 /* GPPackingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BA904E1E9633DA00BF7A46 /* GPPackingListViewController.m */; };
 		E0BA90511E9633EF00BF7A46 /* GPPackingListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BA90501E9633EF00BF7A46 /* GPPackingListViewController.storyboard */; };
@@ -108,9 +110,9 @@
 		E05530C21E9C8C0000B65DCB /* GPLayerAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLayerAnimationViewController.h; sourceTree = "<group>"; };
 		E05530C31E9C8C0000B65DCB /* GPLayerAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPLayerAnimationViewController.m; sourceTree = "<group>"; };
 		E05530C41E9C8C0000B65DCB /* GPLayerAnimationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPLayerAnimationViewController.storyboard; sourceTree = "<group>"; };
-		E07576CA1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPTwoLayerAnimationViewController.storyboard; sourceTree = "<group>"; };
-		E07576CB1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTwoLayerAnimationViewController.h; sourceTree = "<group>"; };
-		E07576CC1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTwoLayerAnimationViewController.m; sourceTree = "<group>"; };
+		E07576CA1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPThreeLayerAnimationViewController.storyboard; sourceTree = "<group>"; };
+		E07576CB1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPThreeLayerAnimationViewController.h; sourceTree = "<group>"; };
+		E07576CC1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPThreeLayerAnimationViewController.m; sourceTree = "<group>"; };
 		E07576CF1E9F7E6B00B27B08 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E083989F1E8F954C00624D8A /* UIView+LayoutMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutMethods.h"; sourceTree = "<group>"; };
 		E08398A01E8F954C00624D8A /* UIView+LayoutMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutMethods.m"; sourceTree = "<group>"; };
@@ -189,6 +191,9 @@
 		E097C67E1E8E007C00EB7E15 /* GPViewAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPViewAnimationViewController.h; sourceTree = "<group>"; };
 		E097C67F1E8E007C00EB7E15 /* GPViewAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPViewAnimationViewController.m; sourceTree = "<group>"; };
 		E097C6811E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPViewAnimationViewController.storyboard; sourceTree = "<group>"; };
+		E09D5CD81EA4B249002AFA74 /* GPTwoLayerAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTwoLayerAnimationViewController.h; sourceTree = "<group>"; };
+		E09D5CD91EA4B249002AFA74 /* GPTwoLayerAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTwoLayerAnimationViewController.m; sourceTree = "<group>"; };
+		E09D5CDA1EA4B249002AFA74 /* GPTwoLayerAnimationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPTwoLayerAnimationViewController.storyboard; sourceTree = "<group>"; };
 		E0B951F31E928028007B30D2 /* GPAirLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPAirLoginViewController.storyboard; sourceTree = "<group>"; };
 		E0BA904D1E9633DA00BF7A46 /* GPPackingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPackingListViewController.h; sourceTree = "<group>"; };
 		E0BA904E1E9633DA00BF7A46 /* GPPackingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPackingListViewController.m; sourceTree = "<group>"; };
@@ -287,9 +292,9 @@
 		E07576C91E9F637600B27B08 /* 05-Layer-Group */ = {
 			isa = PBXGroup;
 			children = (
-				E07576CB1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.h */,
-				E07576CC1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.m */,
-				E07576CA1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.storyboard */,
+				E09D5CD81EA4B249002AFA74 /* GPTwoLayerAnimationViewController.h */,
+				E09D5CD91EA4B249002AFA74 /* GPTwoLayerAnimationViewController.m */,
+				E09D5CDA1EA4B249002AFA74 /* GPTwoLayerAnimationViewController.storyboard */,
 			);
 			name = "05-Layer-Group";
 			sourceTree = "<group>";
@@ -308,11 +313,14 @@
 			name = "02-ViewPractice&keyFrame";
 			sourceTree = "<group>";
 		};
-		E08FF29A1EA07E02004DC21D /* New Group */ = {
+		E08FF29A1EA07E02004DC21D /* 06-Layer-Spring */ = {
 			isa = PBXGroup;
 			children = (
+				E07576CB1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.h */,
+				E07576CC1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.m */,
+				E07576CA1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.storyboard */,
 			);
-			name = "New Group";
+			name = "06-Layer-Spring";
 			sourceTree = "<group>";
 		};
 		E097C6081E8DFE8E00EB7E15 /* Class */ = {
@@ -325,7 +333,7 @@
 				E0BA904C1E9633A400BF7A46 /* 03-View-auto-layout */,
 				E0FCDB131E9B63E200B7E0BC /* 04-Layer-CABasic-CAKeyframe */,
 				E07576C91E9F637600B27B08 /* 05-Layer-Group */,
-				E08FF29A1EA07E02004DC21D /* New Group */,
+				E08FF29A1EA07E02004DC21D /* 06-Layer-Spring */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -635,12 +643,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E07576CD1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.storyboard in Resources */,
+				E07576CD1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.storyboard in Resources */,
 				E0B951F41E928028007B30D2 /* GPAirLoginViewController.storyboard in Resources */,
 				E097C6821E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard in Resources */,
 				E097C6751E8DFE8E00EB7E15 /* SVProgressHUD.bundle in Resources */,
 				E05530C61E9C8C0000B65DCB /* GPLayerAnimationViewController.storyboard in Resources */,
 				E0238AF51E8CE29E00B22A29 /* LaunchScreen.storyboard in Resources */,
+				E09D5CDC1EA4B249002AFA74 /* GPTwoLayerAnimationViewController.storyboard in Resources */,
 				E0BA90511E9633EF00BF7A46 /* GPPackingListViewController.storyboard in Resources */,
 				E0238AF21E8CE29E00B22A29 /* Assets.xcassets in Resources */,
 				E097C6661E8DFE8E00EB7E15 /* IQKeyboardManager.bundle in Resources */,
@@ -704,11 +713,12 @@
 				E097C66F1E8DFE8E00EB7E15 /* NSObject+MJProperty.m in Sources */,
 				E097C6691E8DFE8E00EB7E15 /* MJProperty.m in Sources */,
 				E097C65D1E8DFE8E00EB7E15 /* IQUIWindow+Hierarchy.m in Sources */,
+				E09D5CDB1EA4B249002AFA74 /* GPTwoLayerAnimationViewController.m in Sources */,
 				E020E2311E9498D700CFBDA0 /* GPSnowView.m in Sources */,
 				E097C6631E8DFE8E00EB7E15 /* IQTitleBarButtonItem.m in Sources */,
 				E097C65C1E8DFE8E00EB7E15 /* IQUIViewController+Additions.m in Sources */,
 				E097C6771E8DFE8E00EB7E15 /* SVRadialGradientLayer.m in Sources */,
-				E07576CE1E9F660F00B27B08 /* GPTwoLayerAnimationViewController.m in Sources */,
+				E07576CE1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.m in Sources */,
 				E097C6701E8DFE8E00EB7E15 /* NSString+MJExtension.m in Sources */,
 				E097C66C1E8DFE8E00EB7E15 /* NSObject+MJClass.m in Sources */,
 				E097C66B1E8DFE8E00EB7E15 /* MJPropertyType.m in Sources */,
