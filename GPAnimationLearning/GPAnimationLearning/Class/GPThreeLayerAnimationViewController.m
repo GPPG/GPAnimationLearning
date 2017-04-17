@@ -272,19 +272,22 @@
 }
 - (void)roundCorners:(CALayer *)layer radius:(CGFloat)radius
 {
-    CABasicAnimation *round = [CABasicAnimation animationWithKeyPath:animationCorner];
+    CASpringAnimation *round = [CASpringAnimation animationWithKeyPath:animationCorner];
+    round.damping = 5.0;
     round.fromValue = @(layer.cornerRadius);
     round.toValue = @(radius);
-    round.duration = 0.5;
+    round.duration = round.settlingDuration;
     [layer addAnimation:round forKey:nil];
     layer.cornerRadius = radius;
 }
 - (void)tintBackgroundColor:(CALayer *)layer toColor:(UIColor *)toColor
 {
-    CABasicAnimation *tint = [CABasicAnimation animationWithKeyPath:animationBackColor];
+    CASpringAnimation *tint = [CASpringAnimation animationWithKeyPath:animationBackColor];
+    tint.damping = 5.0;
+    tint.initialVelocity = -10.0;
     tint.fromValue = (__bridge id _Nullable)(layer.backgroundColor);
     tint.toValue = toColor;
-    tint.duration = 0.5;
+    tint.duration = tint.settlingDuration;
     [layer addAnimation:tint forKey:nil];
     layer.backgroundColor = toColor.CGColor;
 }
