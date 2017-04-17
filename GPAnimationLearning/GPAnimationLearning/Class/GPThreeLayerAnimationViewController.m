@@ -293,6 +293,32 @@
 {
     [self.infoLabel.layer removeAnimationForKey:@"infoappear"];
 }
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (textField.text.length < 6) {
+        CASpringAnimation *jump = [CASpringAnimation animationWithKeyPath:animationY];
+        jump.initialVelocity = 100.0;
+        jump.mass = 10.0;
+        jump.stiffness = 1500.0;
+        jump.damping = 50.0;
+        jump.fromValue = @(textField.layer.position.y + 1.0);
+        jump.toValue = @(textField.layer.position.y);
+        jump.duration = jump.settlingDuration;
+        [textField.layer addAnimation:jump forKey:nil];
+        
+        textField.layer.borderWidth = 3.0;
+        textField.layer.borderColor = [UIColor clearColor].CGColor;
+        
+        CASpringAnimation *flash = [CASpringAnimation animationWithKeyPath:animationBorderColor];
+        flash.damping = 3.0;
+        flash.stiffness = 200.0;
+        flash.fromValue = (id)[UIColor redColor].CGColor;
+        flash.toValue = (id)[UIColor whiteColor].CGColor;
+        flash.duration = flash.settlingDuration;
+        [textField.layer addAnimation:flash forKey:nil];
+        
+    }
+}
 #pragma mark - 动画代理
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
@@ -301,10 +327,11 @@
         CALayer *layerr = [anim valueForKey:@"layerr"];
         CALayer *layerrr = [anim valueForKey:@"layerrr"];
 
-        CABasicAnimation *pulse = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        pulse.fromValue = @(1.5);
+        CASpringAnimation *pulse = [CASpringAnimation animationWithKeyPath:@"transform.scale"];
+        pulse.fromValue = @(1.25);
         pulse.toValue = @(1.0);
-        pulse.duration = 0.25;
+        pulse.duration = pulse.settlingDuration;
+        pulse.damping = 7.5;
         [layer addAnimation:pulse forKey:nil];
         [layerr addAnimation:pulse forKey:nil];
         [layerrr addAnimation:pulse forKey:nil];
