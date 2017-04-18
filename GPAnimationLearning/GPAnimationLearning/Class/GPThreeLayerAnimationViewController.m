@@ -23,6 +23,7 @@
 @property (nonatomic, strong) UILabel *statusLabel;
 @property (nonatomic, assign) CGPoint initialPoint;
 @property (nonatomic, strong) UILabel *infoLabel;
+@property(nonatomic, strong) CALayer *balloon;
 // 控件约束
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tittleCenterYLayout;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *phoneCenterYLayout;
@@ -101,8 +102,16 @@
     infoLabel.text = @"请点击文本框输入账号和密码";
     self.infoLabel = infoLabel;
     [self.view insertSubview:infoLabel belowSubview:self.loginBtn];
+    
+    // 添加氢气球
+    CALayer *balloon = [CALayer layer];
+    balloon.contents = CFBridgingRelease([UIImage imageNamed:@"balloon"].CGImage);
+    balloon.frame = CGRectMake(-50.0, 0.0, 50.0, 65.0);
+    self.balloon = balloon;
+    [self.view.layer insertSublayer:balloon below:self.phoneTextField.layer];
 }
 #pragma mark - 动画相关
+
 - (void)setupAnimation
 {
     self.phoneTextField.alpha = 0.0;
@@ -207,6 +216,17 @@
     [self animateCloud:self.clound2.layer];
     [self animateCloud:self.clound3.layer];
     [self animateCloud:self.clound4.layer];
+    
+    // layer的帧动画
+    CAKeyframeAnimation *flight = [CAKeyframeAnimation animationWithKeyPath:animationPosition];
+    flight.duration = 12.0;
+    NSValue *value1 = [NSValue valueWithCGPoint:CGPointMake(-50.0, 0.0)];
+    NSValue *value2 = [NSValue valueWithCGPoint:CGPointMake(self.view.width, 160.0)];
+    NSValue *value3 = [NSValue valueWithCGPoint:CGPointMake(-50.0, self.loginBtn.centerY)];
+    flight.values = @[value1,value2,value3];
+    flight.keyTimes = @[@(0.0),@(0.5),@(1.0)];
+    [self.balloon addAnimation:flight forKey:nil];
+    self.balloon.position = CGPointMake(-50.0, self.loginBtn.centerY);
 }
 
 - (void)showMessage:(NSInteger)messageInt
@@ -255,6 +275,13 @@
         [self roundCorners:self.loginBtn.layer radius:10.0];
         self.loginBtn.enabled = YES;
     }];
+    
+    CAKeyframeAnimation *wobble = [CAKeyframeAnimation animationWithKeyPath:animationRotation];
+    wobble.duration = 1;
+    wobble.repeatCount = 4;
+    wobble.values = @[@(0.0),@(-M_PI /  4.0),@(0.0),@(-M_PI / 4.0),@(0.0)];
+    wobble.keyTimes = @[@(0.0),@(0.25),@(0.5),@(0.75),@(1.0)];
+    [self.titleLabel.layer addAnimation:wobble forKey:nil];
 }
 
 - (void)animateCloud:(CALayer *)layer
