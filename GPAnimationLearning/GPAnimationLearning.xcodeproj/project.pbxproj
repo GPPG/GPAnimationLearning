@@ -313,14 +313,14 @@
 			name = "02-ViewPractice&keyFrame";
 			sourceTree = "<group>";
 		};
-		E08FF29A1EA07E02004DC21D /* 06-Layer-Spring */ = {
+		E08FF29A1EA07E02004DC21D /* 06-Layer-Spring-KeyFrame */ = {
 			isa = PBXGroup;
 			children = (
 				E07576CB1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.h */,
 				E07576CC1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.m */,
 				E07576CA1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.storyboard */,
 			);
-			name = "06-Layer-Spring";
+			name = "06-Layer-Spring-KeyFrame";
 			sourceTree = "<group>";
 		};
 		E097C6081E8DFE8E00EB7E15 /* Class */ = {
@@ -333,7 +333,7 @@
 				E0BA904C1E9633A400BF7A46 /* 03-View-auto-layout */,
 				E0FCDB131E9B63E200B7E0BC /* 04-Layer-CABasic-CAKeyframe */,
 				E07576C91E9F637600B27B08 /* 05-Layer-Group */,
-				E08FF29A1EA07E02004DC21D /* 06-Layer-Spring */,
+				E08FF29A1EA07E02004DC21D /* 06-Layer-Spring-KeyFrame */,
 			);
 			path = Class;
 			sourceTree = "<group>";
