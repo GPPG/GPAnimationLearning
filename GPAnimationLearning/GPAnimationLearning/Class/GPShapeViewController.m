@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet GPAvatarView *myAvatar;
 @property (weak, nonatomic) IBOutlet GPAvatarView *opponentAvatar;
 - (IBAction)searchAgainBtnClick:(UIButton *)sender;
-
 @end
 
 @implementation GPShapeViewController
@@ -24,11 +23,18 @@
 #pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupView];
 }
 #pragma mark - 初始化
-
-
+- (void)setupView
+{
+    self.myAvatar.name = @"我";
+    self.myAvatar.image = [UIImage imageNamed:@"avatar-1"];
+    self.opponentAvatar.name = @"一剑飞仙";
+    self.opponentAvatar.image = [UIImage imageNamed:@"empty"];
+}
 #pragma mark - 内部方法
 - (IBAction)searchAgainBtnClick:(UIButton *)sender {
+    
 }
 @end

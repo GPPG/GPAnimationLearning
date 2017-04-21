@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GPAvatarView : UIView
-
+@property (nonatomic, copy)  NSString *name;
+@property (nonatomic, strong)  UIImage *image;
 @end

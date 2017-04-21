@@ -14,8 +14,6 @@
 
 
 @interface GPAvatarView()
-@property (nonatomic, copy)  NSString *name;
-@property (nonatomic, strong)  UIImage *image;
 @property (nonatomic, strong) CALayer *photoLayer;
 @property (nonatomic, strong) CAShapeLayer *circleLayer;
 @property (nonatomic, strong) CAShapeLayer *maskLayer;
@@ -31,7 +29,13 @@
     }
     return self;
 }
-
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        [self addView];
+    }
+    return self;
+}
 - (void)addView
 {
     UILabel *nameLabel = [[UILabel alloc]init];
@@ -46,6 +50,8 @@
 - (void)didMoveToWindow
 {
     [self.layer addSublayer:self.photoLayer];
+    
+    
 }
 - (void)layoutSubviews
 {
@@ -63,17 +69,17 @@
     
     self.nameLabel.frame = CGRectMake(0, self.bounds.size.height + 10, self.bounds.size.width, 24);
 }
+
+
 #pragma mark - set
 - (void)setName:(NSString *)name
 {
-    if (name.length) {
-        self.nameLabel.text = name;
-    }
+    _name = name;
+    self.nameLabel.text = name;
 }
 - (void)setImage:(UIImage *)image
 {
-    if (image) {
-        self.photoLayer.contents = CFBridgingRelease(image.CGImage);
-    }
+    _image = image;
+    self.photoLayer.contents = CFBridgingRelease(image.CGImage);
 }
 @end
