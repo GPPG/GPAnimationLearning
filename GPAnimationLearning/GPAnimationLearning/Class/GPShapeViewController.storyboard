@@ -35,6 +35,9 @@
                                 <state key="normal" title="重新匹配">
                                     <color key="titleColor" red="1" green="0.87346515619999998" blue="0.41823352349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchAgainBtnClick:" destination="YaX-zH-8cx" eventType="touchUpInside" id="Bk9-zc-MS4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e15-cL-bdW">
                                 <rect key="frame" x="165.5" y="165.5" width="45.5" height="36"/>
@@ -42,6 +45,32 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rj-K0-egx" customClass="GPAvatarView" customModule="GPAnimationLearning">
+                                <rect key="frame" x="265" y="133.5" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="iBP-Qk-ca1"/>
+                                    <constraint firstAttribute="width" constant="100" id="ixh-sL-SWb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="avatar-1"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius ">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFk-KL-Evq" customClass="GPAvatarView" customModule="GPAnimationLearning">
+                                <rect key="frame" x="10" y="133.5" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Zzm-Zr-DLy"/>
+                                    <constraint firstAttribute="width" constant="100" id="cnZ-vC-cNS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="empty"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -52,18 +81,31 @@
                             <constraint firstItem="e15-cL-bdW" firstAttribute="centerX" secondItem="aFe-Sh-hav" secondAttribute="centerX" id="GqZ-MK-p9Z"/>
                             <constraint firstItem="e15-cL-bdW" firstAttribute="centerY" secondItem="aFe-Sh-hav" secondAttribute="centerY" constant="-150" id="LoY-bm-Erq"/>
                             <constraint firstItem="XyL-dx-9Cb" firstAttribute="top" secondItem="aFe-Sh-hav" secondAttribute="top" id="Toc-XQ-EhW"/>
+                            <constraint firstItem="6rj-K0-egx" firstAttribute="centerY" secondItem="e15-cL-bdW" secondAttribute="centerY" id="UQK-jL-vUi"/>
                             <constraint firstItem="ZwU-P9-3hj" firstAttribute="centerX" secondItem="XyL-dx-9Cb" secondAttribute="centerX" id="XQD-y4-3tz"/>
+                            <constraint firstItem="tFk-KL-Evq" firstAttribute="leading" secondItem="aFe-Sh-hav" secondAttribute="leading" constant="10" id="YEX-zs-SKD"/>
+                            <constraint firstItem="e15-cL-bdW" firstAttribute="centerY" secondItem="tFk-KL-Evq" secondAttribute="centerY" id="hhb-tX-wBc"/>
                             <constraint firstItem="ZwU-P9-3hj" firstAttribute="top" secondItem="dS4-ZL-qc2" secondAttribute="bottom" constant="8" symbolic="YES" id="j37-oY-JoN"/>
+                            <constraint firstAttribute="trailing" secondItem="6rj-K0-egx" secondAttribute="trailing" constant="10" id="nPl-2T-uQD"/>
                             <constraint firstItem="Hkj-3A-5yq" firstAttribute="top" secondItem="XyL-dx-9Cb" secondAttribute="bottom" id="z4O-oa-nUB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myAvatar" destination="6rj-K0-egx" id="jzA-CP-CWB"/>
+                        <outlet property="opponentAvatar" destination="tFk-KL-Evq" id="eQq-L1-3QL"/>
+                        <outlet property="searchAgainBtn" destination="U5D-aN-oBL" id="C3o-cv-IXQ"/>
+                        <outlet property="statusLabel" destination="ZwU-P9-3hj" id="ROw-YG-5Us"/>
+                        <outlet property="vsLabel" destination="e15-cL-bdW" id="tCx-IM-daA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRL-aO-8Th" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="-442"/>
+            <point key="canvasLocation" x="-551" y="-736"/>
         </scene>
     </scenes>
     <resources>
+        <image name="avatar-1" width="100" height="100"/>
         <image name="bg-boxingring" width="320" height="568"/>
+        <image name="empty" width="97" height="105"/>
     </resources>
 </document>

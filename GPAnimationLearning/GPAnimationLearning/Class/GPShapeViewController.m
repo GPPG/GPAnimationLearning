@@ -7,31 +7,28 @@
 //
 
 #import "GPShapeViewController.h"
+#import "GPAvatarView.h"
 
 @interface GPShapeViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *vsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *searchAgainBtn;
+@property (weak, nonatomic) IBOutlet GPAvatarView *myAvatar;
+@property (weak, nonatomic) IBOutlet GPAvatarView *opponentAvatar;
+- (IBAction)searchAgainBtnClick:(UIButton *)sender;
 
 @end
 
 @implementation GPShapeViewController
 
+#pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
+#pragma mark - 初始化
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - 内部方法
+- (IBAction)searchAgainBtnClick:(UIButton *)sender {
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

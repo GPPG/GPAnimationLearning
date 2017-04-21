@@ -13,6 +13,7 @@
 #import "GPLayerAnimationViewController.h"
 #import "GPTwoLayerAnimationViewController.h"
 #import "GPThreeLayerAnimationViewController.h"
+#import "GPShapeViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *rootTableView;
@@ -75,7 +76,7 @@ static NSString * const oneCellID = @"oneCellID";
 - (NSArray *)titleArray
 {
     if (!_titleArray) {
-        _titleArray = @[@"01-View&Spring&Transitions",@"02-View&KeyFrame",@"03-auto-layout",@"04-Layer-CABasic-CAKeyframe",@"05-Layer-Group",@"06-Layer-Spring"];
+        _titleArray = @[@"01-View&Spring&Transitions",@"02-View&KeyFrame",@"03-auto-layout",@"04-Layer-CABasic-CAKeyframe",@"05-Layer-Group",@"06-Layer-Spring",@"07-Shapes&Masks"];
     }
     return _titleArray;
 }
@@ -83,7 +84,7 @@ static NSString * const oneCellID = @"oneCellID";
 - (NSArray *)subVcArray
 {
     if (!_subVcArray) {
-        _subVcArray = @[[GPViewAnimationViewController class],[GPAirLoginViewController class],[GPPackingListViewController class],[GPLayerAnimationViewController class],[GPTwoLayerAnimationViewController class],[GPThreeLayerAnimationViewController class]];
+        _subVcArray = @[[GPViewAnimationViewController class],[GPAirLoginViewController class],[GPPackingListViewController class],[GPLayerAnimationViewController class],[GPTwoLayerAnimationViewController class],[GPThreeLayerAnimationViewController class],[GPShapeViewController class]];
     }
     return _subVcArray;
 }
