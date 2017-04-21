@@ -50,8 +50,9 @@
 - (void)didMoveToWindow
 {
     [self.layer addSublayer:self.photoLayer];
-    
-    
+    self.photoLayer.mask = self.maskLayer;
+    [self.layer addSublayer:self.circleLayer];
+    [self addSubview:self.nameLabel];
 }
 - (void)layoutSubviews
 {
