@@ -68,7 +68,6 @@
 		E0B951F41E928028007B30D2 /* GPAirLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B951F31E928028007B30D2 /* GPAirLoginViewController.storyboard */; };
 		E0BA904F1E9633DA00BF7A46 /* GPPackingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BA904E1E9633DA00BF7A46 /* GPPackingListViewController.m */; };
 		E0BA90511E9633EF00BF7A46 /* GPPackingListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BA90501E9633EF00BF7A46 /* GPPackingListViewController.storyboard */; };
-		E0DA42711EADA2CA00E4A5FC /* GPjkkkCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA42701EADA2CA00E4A5FC /* GPjkkkCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,8 +206,6 @@
 		E0BA904D1E9633DA00BF7A46 /* GPPackingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPackingListViewController.h; sourceTree = "<group>"; };
 		E0BA904E1E9633DA00BF7A46 /* GPPackingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPackingListViewController.m; sourceTree = "<group>"; };
 		E0BA90501E9633EF00BF7A46 /* GPPackingListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPPackingListViewController.storyboard; sourceTree = "<group>"; };
-		E0DA426F1EADA2CA00E4A5FC /* GPjkkkCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPjkkkCollectionViewController.h; sourceTree = "<group>"; };
-		E0DA42701EADA2CA00E4A5FC /* GPjkkkCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPjkkkCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,8 +241,6 @@
 				E0219CAE1EA5ECE800382BC4 /* GPShapeViewController.h */,
 				E0219CAF1EA5ECE800382BC4 /* GPShapeViewController.m */,
 				E0219CB11EA5ECF400382BC4 /* GPShapeViewController.storyboard */,
-				E0DA426F1EADA2CA00E4A5FC /* GPjkkkCollectionViewController.h */,
-				E0DA42701EADA2CA00E4A5FC /* GPjkkkCollectionViewController.m */,
 			);
 			name = "07-Shapes&Masks";
 			sourceTree = "<group>";
@@ -721,7 +716,6 @@
 				E097C6651E8DFE8E00EB7E15 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				E097C6731E8DFE8E00EB7E15 /* SVIndefiniteAnimatedView.m in Sources */,
 				E097C6711E8DFE8E00EB7E15 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
-				E0DA42711EADA2CA00E4A5FC /* GPjkkkCollectionViewController.m in Sources */,
 				E097C65B1E8DFE8E00EB7E15 /* IQUIView+Hierarchy.m in Sources */,
 				E097C6621E8DFE8E00EB7E15 /* IQPreviousNextView.m in Sources */,
 				E097C6801E8E007C00EB7E15 /* GPViewAnimationViewController.m in Sources */,

@@ -11,4 +11,5 @@
 @interface GPAvatarView : UIView
 @property (nonatomic, copy)  NSString *name;
 @property (nonatomic, strong)  UIImage *image;
+- (void)bounceOff:(CGPoint)point morphSize:(CGSize)morphSize;
 @end
