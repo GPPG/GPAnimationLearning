@@ -46,6 +46,6 @@
 }
 #pragma mark - 内部方法
 - (IBAction)searchAgainBtnClick:(UIButton *)sender {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end
