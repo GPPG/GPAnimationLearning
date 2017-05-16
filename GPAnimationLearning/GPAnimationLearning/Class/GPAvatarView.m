@@ -67,13 +67,45 @@
     
     self.maskLayer.path = self.circleLayer.path;
     self.maskLayer.position = CGPointMake(0, 10);
-    
+
     self.nameLabel.frame = CGRectMake(0, self.bounds.size.height + 10, self.bounds.size.width, 24);
 }
-
-
-
-
+- (void)bounceOff:(CGPoint)point morphSize:(CGSize)morphSize
+{
+    CGPoint originalCenter = self.center;
+    
+    [UIView animateWithDuration:AnimationDuration delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+        self.center = point;
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+    [UIView animateWithDuration:AnimationDuration delay:AnimationDuration usingSpringWithDamping:0.7 initialSpringVelocity:1.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+        
+        self.center = originalCenter;
+        
+    } completion:^(BOOL finished) {
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self bounceOff:point morphSize:morphSize];
+        });
+        
+    }];
+    
+    CGRect morphedFrame;
+    if (originalCenter.x > point.x) {
+        morphedFrame = CGRectMake(0.0, self.bounds.size.height - morphSize.height, morphSize.width, morphSize.height);
+    }else{
+        morphedFrame = CGRectMake(self.bounds.size.width - morphSize.width, self.bounds.size.height - morphSize.height, morphSize.width, morphSize.height);
+    }
+    
+    CABasicAnimation *morphAnimation = [CABasicAnimation animationWithKeyPath:animationPath];
+    morphAnimation.duration = AnimationDuration;
+    morphAnimation.toValue = (__bridge id _Nullable)([UIBezierPath bezierPathWithOvalInRect:morphedFrame].CGPath);
+    morphAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    [self.circleLayer addAnimation:morphAnimation forKey:nil];
+    [self.maskLayer addAnimation:morphAnimation forKey:nil];
+}
 #pragma mark - set
 - (void)setName:(NSString *)name
 {
