@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupView];
+    [self setupAnimated];
 }
 #pragma mark - 初始化
 - (void)setupView
@@ -32,6 +33,16 @@
     self.myAvatar.image = [UIImage imageNamed:@"avatar-1"];
     self.opponentAvatar.name = @"一剑飞仙";
     self.opponentAvatar.image = [UIImage imageNamed:@"empty"];
+}
+- (void)setupAnimated
+{
+    CGSize avatarSize = self.myAvatar.size;
+    CGFloat bounceXOffset = avatarSize.width / 1.9;
+    CGSize morphSize = CGSizeMake(avatarSize.width * 0.85, avatarSize.height * 1.1);
+    CGPoint rightBouncePoint = CGPointMake(self.view.width * 0.5 + bounceXOffset, self.myAvatar.center.y);
+    CGPoint leftBouncePoint = CGPointMake(self.view.width * 0.5 - bounceXOffset, self.myAvatar.center.y);
+    [self.myAvatar bounceOff:rightBouncePoint morphSize:morphSize];
+    [self.opponentAvatar bounceOff:leftBouncePoint morphSize:morphSize];
 }
 #pragma mark - 内部方法
 - (IBAction)searchAgainBtnClick:(UIButton *)sender {
