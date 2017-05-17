@@ -11,5 +11,4 @@
 @interface GPAnimatedMaskLabelView : UIView
 
 @property (nonatomic, copy) NSString *textStr;
-
 @end
