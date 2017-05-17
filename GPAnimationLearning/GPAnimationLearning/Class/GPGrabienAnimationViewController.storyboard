@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,34 +36,26 @@
                                     <constraint firstAttribute="height" constant="60" id="Vfd-w3-uJA"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bzt-7m-dfv">
-                                <rect key="frame" x="85" y="233" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="K1u-Cd-vDw"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JsW-LV-lCc" firstAttribute="leading" secondItem="c4p-xa-LgK" secondAttribute="leading" constant="20" id="3Vj-Ee-gSE"/>
                             <constraint firstAttribute="trailing" secondItem="JsW-LV-lCc" secondAttribute="trailing" constant="20" id="4AR-BX-so3"/>
                             <constraint firstItem="JsW-LV-lCc" firstAttribute="top" secondItem="prr-At-gMF" secondAttribute="bottom" constant="20" id="5o9-r1-umu"/>
-                            <constraint firstItem="bzt-7m-dfv" firstAttribute="leading" secondItem="c4p-xa-LgK" secondAttribute="leadingMargin" constant="69" id="ItU-sn-HWx"/>
                             <constraint firstItem="m0l-gp-oF2" firstAttribute="leading" secondItem="c4p-xa-LgK" secondAttribute="leading" constant="50" id="KJ5-88-tT6"/>
                             <constraint firstItem="Kck-Fe-tBd" firstAttribute="top" secondItem="m0l-gp-oF2" secondAttribute="bottom" constant="60" id="NVE-C6-uW4"/>
                             <constraint firstAttribute="trailing" secondItem="m0l-gp-oF2" secondAttribute="trailing" constant="50" id="ZPv-Cu-T92"/>
-                            <constraint firstItem="bzt-7m-dfv" firstAttribute="top" secondItem="JsW-LV-lCc" secondAttribute="bottom" constant="93" id="c6d-e1-u3n"/>
-                            <constraint firstItem="bzt-7m-dfv" firstAttribute="trailing" secondItem="m0l-gp-oF2" secondAttribute="trailing" id="mey-sq-U1p"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="animatedView" destination="m0l-gp-oF2" id="jC2-3K-4tj"/>
-                        <outlet property="imageView" destination="bzt-7m-dfv" id="UcF-Wn-5Y3"/>
+                        <outlet property="bottomLayout" destination="NVE-C6-uW4" id="xBa-Ew-rwX"/>
+                        <outlet property="topLabelTopLayout" destination="5o9-r1-umu" id="oqy-fN-fh7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYq-GF-mha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="184.85757121439281"/>
+            <point key="canvasLocation" x="-159" y="61"/>
         </scene>
     </scenes>
 </document>

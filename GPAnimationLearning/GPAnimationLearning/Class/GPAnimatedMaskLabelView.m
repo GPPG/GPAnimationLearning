@@ -25,8 +25,8 @@
     [super didMoveToWindow];
     
     CABasicAnimation *gradientAnimation = [CABasicAnimation animationWithKeyPath:animationLocations];
-    gradientAnimation.fromValue = @[@(0.0), @(0.0), @(0.25)];
-    gradientAnimation.toValue = @[@(0.75), @(1.0), @(1.0)];
+    gradientAnimation.fromValue = @[@(0.0),@(0.0),@(0.0),@(0.0),@(0.0),@(0.25)];;
+    gradientAnimation.toValue = @[@(0.65),@(0.8),@(0.85),@(0.9),@(0.95),@(1.0)];;
     gradientAnimation.duration = 3.0;
     gradientAnimation.repeatCount = CGFLOAT_MAX;
     [self.gradientLayer addAnimation:gradientAnimation forKey:nil];
@@ -80,10 +80,10 @@
         _gradientLayer.startPoint = CGPointMake(0, 0.5);
         _gradientLayer.endPoint = CGPointMake(1.0, 0.5);
         
-        NSArray *colors = @[(__bridge id)[UIColor whiteColor].CGColor,(__bridge id)[UIColor blackColor].CGColor,(__bridge id)[UIColor whiteColor].CGColor];
+        NSArray *colors = @[(__bridge id)[UIColor yellowColor].CGColor,(__bridge id)[UIColor greenColor].CGColor,(__bridge id)[UIColor orangeColor].CGColor,(__bridge id)[UIColor cyanColor].CGColor,(__bridge id)[UIColor redColor].CGColor,(__bridge id)[UIColor whiteColor].CGColor];
         _gradientLayer.colors = colors;
         
-        NSArray *locations = @[@(0.25),@(0.5),@(0.75)];
+        NSArray *locations = @[@(0.0),@(0.0),@(0.0),@(0.0),@(0.0),@(0.25)];
         _gradientLayer.locations = locations;
     }
     return _gradientLayer;
