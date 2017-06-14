@@ -9,7 +9,9 @@
 #import "GPStrokePathViewController.h"
 
 @interface GPStrokePathViewController ()
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation GPStrokePathViewController
