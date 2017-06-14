@@ -72,6 +72,8 @@
 		E09D5CDC1EA4B249002AFA74 /* GPTwoLayerAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09D5CDA1EA4B249002AFA74 /* GPTwoLayerAnimationViewController.storyboard */; };
 		E0A69D2B1EF112E8004D81CC /* GPTenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A69D2A1EF112E8004D81CC /* GPTenViewController.m */; };
 		E0A69D2D1EF112F8004D81CC /* GPTenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A69D2C1EF112F8004D81CC /* GPTenViewController.storyboard */; };
+		E0A69D301EF113AE004D81CC /* GPAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A69D2F1EF113AE004D81CC /* GPAssistant.m */; };
+		E0A69D331EF113BA004D81CC /* GPMicMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A69D321EF113BA004D81CC /* GPMicMonitor.m */; };
 		E0B951F41E928028007B30D2 /* GPAirLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B951F31E928028007B30D2 /* GPAirLoginViewController.storyboard */; };
 		E0BA904F1E9633DA00BF7A46 /* GPPackingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BA904E1E9633DA00BF7A46 /* GPPackingListViewController.m */; };
 		E0BA90511E9633EF00BF7A46 /* GPPackingListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BA90501E9633EF00BF7A46 /* GPPackingListViewController.storyboard */; };
@@ -220,6 +222,10 @@
 		E0A69D291EF112E8004D81CC /* GPTenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTenViewController.h; sourceTree = "<group>"; };
 		E0A69D2A1EF112E8004D81CC /* GPTenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTenViewController.m; sourceTree = "<group>"; };
 		E0A69D2C1EF112F8004D81CC /* GPTenViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPTenViewController.storyboard; sourceTree = "<group>"; };
+		E0A69D2E1EF113AE004D81CC /* GPAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAssistant.h; sourceTree = "<group>"; };
+		E0A69D2F1EF113AE004D81CC /* GPAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAssistant.m; sourceTree = "<group>"; };
+		E0A69D311EF113BA004D81CC /* GPMicMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPMicMonitor.h; sourceTree = "<group>"; };
+		E0A69D321EF113BA004D81CC /* GPMicMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPMicMonitor.m; sourceTree = "<group>"; };
 		E0B951F31E928028007B30D2 /* GPAirLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPAirLoginViewController.storyboard; sourceTree = "<group>"; };
 		E0BA904D1E9633DA00BF7A46 /* GPPackingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPackingListViewController.h; sourceTree = "<group>"; };
 		E0BA904E1E9633DA00BF7A46 /* GPPackingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPackingListViewController.m; sourceTree = "<group>"; };
@@ -581,6 +587,10 @@
 		E0A69D251EF10C6A004D81CC /* 10-Lris */ = {
 			isa = PBXGroup;
 			children = (
+				E0A69D2E1EF113AE004D81CC /* GPAssistant.h */,
+				E0A69D2F1EF113AE004D81CC /* GPAssistant.m */,
+				E0A69D311EF113BA004D81CC /* GPMicMonitor.h */,
+				E0A69D321EF113BA004D81CC /* GPMicMonitor.m */,
 				E0A69D291EF112E8004D81CC /* GPTenViewController.h */,
 				E0A69D2A1EF112E8004D81CC /* GPTenViewController.m */,
 				E0A69D2C1EF112F8004D81CC /* GPTenViewController.storyboard */,
@@ -769,6 +779,8 @@
 				E097C6571E8DFE8E00EB7E15 /* UIViewController+GPExtension.m in Sources */,
 				E0238AEA1E8CE29E00B22A29 /* AppDelegate.m in Sources */,
 				E05530C51E9C8C0000B65DCB /* GPLayerAnimationViewController.m in Sources */,
+				E0A69D331EF113BA004D81CC /* GPMicMonitor.m in Sources */,
+				E0A69D301EF113AE004D81CC /* GPAssistant.m in Sources */,
 				E097C65E1E8DFE8E00EB7E15 /* IQKeyboardManager.m in Sources */,
 				E097C6651E8DFE8E00EB7E15 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				E097C6731E8DFE8E00EB7E15 /* SVIndefiniteAnimatedView.m in Sources */,
