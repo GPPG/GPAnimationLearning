@@ -21,6 +21,8 @@
 		E0238B001E8CE29E00B22A29 /* GPAnimationLearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238AFF1E8CE29E00B22A29 /* GPAnimationLearningTests.m */; };
 		E0238B0B1E8CE29E00B22A29 /* GPAnimationLearningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0238B0A1E8CE29E00B22A29 /* GPAnimationLearningUITests.m */; };
 		E0457B951E97350800123AB4 /* GPHorizontalItemListView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0457B941E97350800123AB4 /* GPHorizontalItemListView.m */; };
+		E047FE511ED7FEC8009E9F76 /* GPStrokePathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E047FE501ED7FEC8009E9F76 /* GPStrokePathViewController.m */; };
+		E047FE531ED7FF10009E9F76 /* GPStrokePathViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E047FE521ED7FF10009E9F76 /* GPStrokePathViewController.storyboard */; };
 		E05530C51E9C8C0000B65DCB /* GPLayerAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05530C31E9C8C0000B65DCB /* GPLayerAnimationViewController.m */; };
 		E05530C61E9C8C0000B65DCB /* GPLayerAnimationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05530C41E9C8C0000B65DCB /* GPLayerAnimationViewController.storyboard */; };
 		E06343541ECAF0BD0081924D /* GPGrabienAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E06343531ECAF0BD0081924D /* GPGrabienAnimationViewController.m */; };
@@ -118,6 +120,9 @@
 		E0238B0C1E8CE29E00B22A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0457B931E97350800123AB4 /* GPHorizontalItemListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHorizontalItemListView.h; sourceTree = "<group>"; };
 		E0457B941E97350800123AB4 /* GPHorizontalItemListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHorizontalItemListView.m; sourceTree = "<group>"; };
+		E047FE4F1ED7FEC8009E9F76 /* GPStrokePathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPStrokePathViewController.h; sourceTree = "<group>"; };
+		E047FE501ED7FEC8009E9F76 /* GPStrokePathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPStrokePathViewController.m; sourceTree = "<group>"; };
+		E047FE521ED7FF10009E9F76 /* GPStrokePathViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPStrokePathViewController.storyboard; sourceTree = "<group>"; };
 		E05530C21E9C8C0000B65DCB /* GPLayerAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLayerAnimationViewController.h; sourceTree = "<group>"; };
 		E05530C31E9C8C0000B65DCB /* GPLayerAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPLayerAnimationViewController.m; sourceTree = "<group>"; };
 		E05530C41E9C8C0000B65DCB /* GPLayerAnimationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPLayerAnimationViewController.storyboard; sourceTree = "<group>"; };
@@ -317,6 +322,16 @@
 			path = GPAnimationLearningUITests;
 			sourceTree = "<group>";
 		};
+		E047FE4E1ED7E416009E9F76 /* 09-Stroke&Path */ = {
+			isa = PBXGroup;
+			children = (
+				E047FE4F1ED7FEC8009E9F76 /* GPStrokePathViewController.h */,
+				E047FE501ED7FEC8009E9F76 /* GPStrokePathViewController.m */,
+				E047FE521ED7FF10009E9F76 /* GPStrokePathViewController.storyboard */,
+			);
+			name = "09-Stroke&Path";
+			sourceTree = "<group>";
+		};
 		E06343511ECAE6B10081924D /* 08-gradientAnimations */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +391,7 @@
 				E08FF29A1EA07E02004DC21D /* 06-Layer-Spring-KeyFrame */,
 				E0219CAD1EA5B6E700382BC4 /* 07-Shapes&Masks */,
 				E06343511ECAE6B10081924D /* 08-gradientAnimations */,
+				E047FE4E1ED7E416009E9F76 /* 09-Stroke&Path */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -688,6 +704,7 @@
 				E07576CD1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.storyboard in Resources */,
 				E0B951F41E928028007B30D2 /* GPAirLoginViewController.storyboard in Resources */,
 				E097C6821E8E00A000EB7E15 /* GPViewAnimationViewController.storyboard in Resources */,
+				E047FE531ED7FF10009E9F76 /* GPStrokePathViewController.storyboard in Resources */,
 				E097C6751E8DFE8E00EB7E15 /* SVProgressHUD.bundle in Resources */,
 				E0219CB21EA5ECF400382BC4 /* GPShapeViewController.storyboard in Resources */,
 				E05530C61E9C8C0000B65DCB /* GPLayerAnimationViewController.storyboard in Resources */,
@@ -768,6 +785,7 @@
 				E097C6771E8DFE8E00EB7E15 /* SVRadialGradientLayer.m in Sources */,
 				E07576CE1E9F660F00B27B08 /* GPThreeLayerAnimationViewController.m in Sources */,
 				E097C6701E8DFE8E00EB7E15 /* NSString+MJExtension.m in Sources */,
+				E047FE511ED7FEC8009E9F76 /* GPStrokePathViewController.m in Sources */,
 				E097C66C1E8DFE8E00EB7E15 /* NSObject+MJClass.m in Sources */,
 				E097C66B1E8DFE8E00EB7E15 /* MJPropertyType.m in Sources */,
 				E097C6581E8DFE8E00EB7E15 /* IQNSArray+Sort.m in Sources */,
