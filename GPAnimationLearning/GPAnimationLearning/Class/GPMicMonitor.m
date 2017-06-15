@@ -8,6 +8,15 @@
 
 #import "GPMicMonitor.h"
 
+@interface GPMicMonitor()
+
+
+
+@end
+
 @implementation GPMicMonitor
+
+
+
 
 @end
