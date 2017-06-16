@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^levelsHandlerBlock)(CGFloat handFloat);
+
 @interface GPMicMonitor : NSObject
+
+@property (nonatomic, copy) levelsHandlerBlock levelsHandlerBlock;
 
 @end
